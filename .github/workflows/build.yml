@@ -1,0 +1,45 @@
+---
+name: Build CV
+
+'on': {push: {tags: ['v*']}}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Install packages
+        run: |
+          set -euo pipefail
+          sudo apt update
+          sudo apt install -y poppler-utils
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Tectonic
+        uses: wtfjoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build artefacts
+        run: |
+          set -euo pipefail
+          ./build all example
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "Release ${{ github.ref_name }}"
+          files: |
+            juicv.cls
+            output/example-igrmk-head.pdf
+            output/example-igrmk-head.png
+            output/example-igrmk-net.pdf
+            output/example-igrmk-net.png
+            output/example-igrmk-hft.pdf
+            output/example-igrmk-hft.png
+            output/example-igrmk-python.pdf
+            output/example-igrmk-python.png

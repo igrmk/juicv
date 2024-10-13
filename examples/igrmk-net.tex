@@ -1,0 +1,221 @@
+\let\pdfcreationdate=\creationdate
+\documentclass[9pt,a4paper]{juicv}
+\geometry{left=1.25cm, right=1.25cm, top=1.5cm, bottom=1.5cm, columnsep=1cm}
+\usepackage{paracol}
+\usepackage[newcommands]{ragged2e}
+
+\newcommand{\myphone}{\href{tel:+440000000000}{+44 00 0000 0000}}
+\IfFileExists{override.tex}{\input{override.tex}}{}
+
+\hypersetup{colorlinks, urlcolor=accentColor}
+\columnratio{0.67}
+
+\setromanfont{Inter}[
+    Extension      = .otf,
+    UprightFont    = *-Regular,
+    BoldFont       = *-Bold,
+    ItalicFont     = *-Italic,
+    BoldItalicFont = *-BoldItalic]
+
+\begin{document}
+\begin{paracol}{2}
+\cvMakeHeader
+    {Igor Mikushkin}
+    {avatar}
+    {Software Engineer, Software Architect}
+
+\cvLeftSection{\cvPersonIcon}{Profile}
+    20 years in tech, leading fast-paced development.
+    A polyglot programmer with expertise in 10+ languages, recently focused on .NET.
+    An engineer at heart, I build tools to solve challenges.
+    A Skilled Worker visa holder.
+
+\cvLeftSection{\cvExperienceIcon}{Experience}
+    \cvLeftEvent
+        {Chief Technology Officer}
+        {Start From Today}
+        {2021 -- Present}
+        {London, United Kingdom}
+        {https://startfrom.today}
+
+        \begin{itemize}
+            \item Launched a talent platform connecting people, employers, and universities,
+                  with 20K+ MAU, 1,500 registered companies, and 30 universities
+            \item Implemented Scrum and led a 10+ team,
+                  achieving a 3-week time to market
+            \item Worked half-time as a developer: 70\% in .NET,
+                  also in Python, DevOps, React, and as a technical writer
+            \item Architected a scalable system with 30 microservices
+            \item Oversaw cybersecurity, earning Cyber Essentials Plus certifications annually
+            \item Designed an API for internal teams and contractors
+            \item Administered GCP (60 VMs, 100+ Docker containers, 99.98\% uptime)
+        \end{itemize}
+
+    \cvLeftEvent
+        {Software Engineer}
+        {Igor Mikushkin SP}
+        {2017 -- 2021}
+        {Samara, Russia}
+        {}
+
+        \begin{itemize}
+            \item Developed a .NET Core-based charter transportation management system
+                  managing a fleet of 1,000+ minibuses,
+                  and a Kotlin Android app for drivers to handle ticket sales and GPS sharing
+            \item Created 10+ personal projects,
+                  including smsQ (SMS-to-Telegram, 5,000+ users)
+                  and Boxt (email-in-Telegram), primarily using Go and Python
+            \item Built a personal cryptocurrency algotrading system in Go
+        \end{itemize}
+
+    \cvLeftEvent
+        {Software Engineer}
+        {SalonUtlimate Inc.}
+        {2016 -- 2017}
+        {Boston, MA, Remote}
+        {https://salonultimate.com}
+
+        \begin{itemize}
+            \item Worked as key engineer of WPF-based management software
+                  for 100+ US beauty salon networks, improving operations and customer experience
+            \item Developed 4 self-service WPF kiosk apps for beauty salon clients,
+                  including SportClips (2K branches), leading to a decade-long partnership
+        \end{itemize}
+
+    \cvLeftEvent
+        {Lead Software Engineer}
+        {Mercury Development Russia Inc.}
+        {2012 -- 2016}
+        {Samara, Russia}
+        {https://mercdev.com}
+
+        \begin{itemize}
+            \item Built a UWP C\# mobile app for a fitness tracker platform (500K+ MAU)
+            \item Implemented social features for this app
+        \end{itemize}
+
+    \cvLeftEvent
+        {Lead Software Engineer}
+        {Elvees NeoTek CJSC.}
+        {2012 -- 2012}
+        {Samara, Russia}
+        {https://www.elveesneotek.ru/en}
+
+        \begin{itemize}
+            \item Connected 5 IP camera protocols using self-written C++ DirectX drivers
+                  in a computer vision-powered surveillance system
+        \end{itemize}
+
+    \cvLeftEvent
+        {Software Engineer}
+        {CQG Inc.}
+        {2008 -- 2012}
+        {Samara, Russia}
+        {https://www.cqg.com}
+
+        \begin{itemize}
+            \item Integrated 16 exchanges into the CQG data feed using C++ microservices,
+                  achieving sub-100 microsecond latency in co-located environments
+        \end{itemize}
+
+        {
+            \vspace{6pt}
+            \centering
+            \footnotesize
+            \color{secondaryTextColor}
+            --- 3 more positions (primarily C++) upon request ---
+            \par
+        }
+
+\newpage
+\switchcolumn
+
+\cvRightSection{Details}
+    London, United Kingdom\\
+    \myphone\\
+    \href{mailto:job@igr.mk}{job@igr.mk}
+
+    \vspace{6pt}
+    {
+        \small
+        \href{https://www.linkedin.com/in/igrmk}{https://www.linkedin.com/in/igrmk}\\
+        \href{https://github.com/igrmk}{https://github.com/igrmk}\\
+        \href{https://www.coursera.org/learner/igrmk}{https://www.coursera.org/learner/igrmk}
+        \par
+    }
+
+\cvRightSection{Skills}
+    \cvSkill{C\# / .NET}{5}
+    \cvSkill{ASP.NET Core}{5}
+    \cvSkill{Entity Framework Core}{5}
+    \cvSkill{Decision-making skills}{5}
+    \cvSkill{Strategic thinking}{5}
+    \cvSkill{Technical Vision}{5}
+    \cvSkill{Python}{5}
+    \cvSkill{Go}{5}
+    \cvSkill{CI/CD}{5}
+    \cvSkill{C++ / STL / Boost}{5}
+    \cvSkill{Kubernetes / Docker}{5}
+    \cvSkill{PostgreSQL}{4}
+    \cvSkill{Neo4j / Cypher}{4}
+    \cvSkill{Bash}{5}
+    \cvSkill{Terraform}{4}
+    \cvSkill{Google Cloud Platform}{4}
+    \cvSkill{MongoDB}{4}
+    \cvSkill{English}{4}
+
+    \vspace{6pt}
+    {
+        \raggedright
+        \cvTag{WPF}
+        \cvTag{UWP}
+        \cvTag{Reactive Extensions}
+        \cvTag{Swagger}
+        \cvTag{OpenAPI}
+        \cvTag{Kotlin}
+        \cvTag{HTML}
+        \cvTag{JavaScript}
+        \cvTag{React}
+        \cvTag{Innovation}
+        \cvTag{Risk Management}
+        \cvTag{Rider}
+        \cvTag{Vim}
+        \cvTag{PHP}
+        \cvTag{Bitbucket Pipelines}
+        \cvTag{Jupyter}
+        \cvTag{Symfony}
+        \cvTag{NGINX}
+        \cvTag{jq}
+        \cvTag{LaTeX}
+        \cvTag{Jira}
+        \cvTag{Notion}
+        \cvTag{GraphQL}
+    }
+
+\cvRightSection{Education}
+    \cvRightEventNoBody
+        {M.S. in Computer Science}
+        {Nayanova University}
+        {}
+        {Samara, Russia}
+
+\cvRightSection{Certifications}
+    \cvRightEventNoBody
+        {Machine Learning: Regression}
+        {University of Washington on Coursera}
+        {August 2016}
+        {}
+    \cvRightEventNoBody
+        {Machine Learning Foundations: A Case Study Approach}
+        {University of Washington on Coursera}
+        {August 2016}
+        {}
+    \cvRightEventNoBody
+        {Machine Learning}
+        {Stanford University on Coursera}
+        {August 2016}
+        {}
+
+\end{paracol}
+
+\end{document}

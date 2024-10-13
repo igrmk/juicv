@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# shellcheck disable=SC2059
+log_normal() {
+	if [ $# -gt 0 ]; then
+		printf "$@" >&2
+	fi
+	printf "\n" >&2
+}
+
+# shellcheck disable=SC2059
+log_underlined() {
+	line="$(printf "$@")"
+	printf "%s\n" "${line}" >&2
+	printf "%s\n" "${line//?/=}" >&2
+}
+
+if [[ "$#" -lt 1 ]]; then
+	log_normal "Usage: $0 <scope: full|all> [prefix]"
+	exit 1
+fi
+
+scope="$1"
+prefix="${2:-}"
+
+available_cvs=(full head net hft python)
+available_scopes=("all" "${available_cvs[@]}")
+
+available_scopes_str=$(printf ", %s" "${available_scopes[@]}")
+available_scopes_str=${available_scopes_str:2}
+
+is_valid_scope() {
+	for available_scope in "${available_scopes[@]}"; do
+		if [[ "$1" == "$available_scope" ]]; then
+			return 0
+		fi
+	done
+	return 1
+}
+
+if ! is_valid_scope "$scope"; then
+	log_normal "Error: scope must be one of: $available_scopes_str"
+	exit 1
+fi
+
+cd "$(dirname "$0")"
+mkdir -p output
+
+build_file() {
+	log_underlined "PROCESSING '$1'"
+	tectonic -Z search-path=. -o output "examples/$1.tex"
+	prefixed_name="$1"
+	if [[ -n "$prefix" ]]; then
+		prefixed_name="$prefix-$1"
+		mv "output/$1.pdf" "output/$prefixed_name.pdf"
+	fi
+	log_normal "DONE"
+	log_normal
+
+	log_underlined "CREATING PNG FOR '$1'"
+	pdftoppm -singlefile -png -r 300 "output/$prefixed_name.pdf" "output/$prefixed_name" 2> >(
+		# Suppress warnings due to poppler bug: https://gitlab.freedesktop.org/poppler/poppler/-/issues/1524
+		grep -v -E "Couldn't link the profiles|Can't create Lab transform" >&2
+	)
+	log_normal "DONE"
+	log_normal
+}
+
+for cv in "${available_cvs[@]}"; do
+	if [[ "$scope" == "$cv" || "$scope" == "all" ]]; then
+		build_file "igrmk-$cv"
+	fi
+done
