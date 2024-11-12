@@ -12,6 +12,7 @@
 \RequirePackage[inline]{enumitem}
 \RequirePackage{needspace}
 \RequirePackage{etoolbox}
+\RequirePackage[newcommands]{ragged2e}
 
 \usetikzlibrary{arrows}
 
@@ -29,11 +30,11 @@
 \setlength{\parindent}{0pt}
 \pagenumbering{gobble}
 \newlength{\normalToNormalSpacingAdjustment}
-\setlength{\normalToNormalSpacingAdjustment}{0.3pt}
+\setlength{\normalToNormalSpacingAdjustment}{3pt}
 \newlength{\normalToSmallSpacingAdjustment}
-\setlength{\normalToSmallSpacingAdjustment}{-0.3pt}
+\setlength{\normalToSmallSpacingAdjustment}{2.2pt}
 \newlength{\smallToSmallSpacingAdjustment}
-\setlength{\smallToSmallSpacingAdjustment}{-1.3pt}
+\setlength{\smallToSmallSpacingAdjustment}{1.3pt}
 
 \definecolor{secondaryTextColor}{RGB}{115, 115, 115}
 \colorlet{secondaryTextColor}{secondaryTextColor}
@@ -53,10 +54,6 @@
 \cvSetRating
     {\raisebox{1.7pt}{\tikz \fill[rounded corners=1pt] (0,0) rectangle (4.9pt, 2.4pt);}}
     {1.5pt}
-
-\newenvironment{fullwidth}{%
-    \begin{adjustwidth}{}{\dimexpr-\marginparwidth-\marginparsep\relax}}
-    {\end{adjustwidth}}
 
 \newcommand{\cvMakeHeader}[3]{%
     \def\name{#1}
@@ -94,10 +91,11 @@
         {section}
         {1}
         {0pt}
-        {12pt}
+        {7.5pt}
         {3pt}
         {\normalfont\Large\bfseries}
         *{%
+            \raggedright%
             #1\hspace{0.16cm}#2
         }%
     \makeatother
@@ -109,10 +107,10 @@
         {section}
         {1}
         {0pt}
-        {12pt}
-        {2pt}
+        {7pt}
+        {2.5pt}
         {\normalfont\large\bfseries}
-        *{#1}
+        *{\raggedright#1}
     \makeatother
 }
 
@@ -132,6 +130,7 @@
         {2pt}
         {\normalfont\normalsize}
         *{%
+            \raggedright%
             \textbf{\title}%
             \color{secondaryTextColor}
             \ifx\company\empty
@@ -154,30 +153,29 @@
             \else
                 \\[\normalToSmallSpacingAdjustment]
             \fi
-            {
-                \small
+            \small
+            \ifx\date\empty
+            \else
+                \date
+            \fi
+            \ifx\link\empty
+            \else
                 \ifx\date\empty
                 \else
-                    \date
+                    \\[\smallToSmallSpacingAdjustment]
                 \fi
-                \ifx\link\empty
-                \else
-                    \ifx\date\empty
-                    \else
-                        \\[\smallToSmallSpacingAdjustment]
-                    \fi
-                    \link
-                \fi
-            }
+                \link
+            \fi
         }%
     \makeatother
 }
 
-\newcommand{\cvRightEvent}[4]{%
+\newcommand{\cvRightEvent}[5]{%
     \def\title{#1}
     \def\company{#2}
     \def\date{#3}
     \def\location{#4}
+    \def\link{#5}
 
     \makeatletter
     \@startsection
@@ -188,6 +186,7 @@
         {2pt}
         {\normalfont\normalsize}
         *{%
+            \raggedright%
             \title
             \ifx\company\empty
                 \ifx\location\empty
@@ -214,17 +213,26 @@
                 \fi
                 \location
             \fi
+            \small
             \ifx\date\empty
             \else
                 \\[\normalToSmallSpacingAdjustment]
-                {\small\date}
+                \date
+            \fi
+            \ifx\link\empty
+            \else
+                \ifx\date\empty
+                \else
+                    \\[\smallToSmallSpacingAdjustment]
+                \fi
+                \link
             \fi
         }%
     \makeatother
 }
 
-\newcommand{\cvRightEventNoBody}[4]{%
-    \cvRightEvent{#1}{#2}{#3}{#4}
+\newcommand{\cvRightEventNoBody}[5]{%
+    \cvRightEvent{#1}{#2}{#3}{#4}{#5}
     \@nobreakfalse
     \if@afterindent \else
         {\setbox\z@\lastbox}%
