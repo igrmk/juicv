@@ -62,9 +62,10 @@ The following CV has been compiled from the [examples/igrmk-net.tex](examples/ig
 
 ## Internals
 
-1. Vector icons were chosen over the Font Awesome font because the font
-   renders symbols, which, when copied from PDFs, appear as random Unicode
-   characters. This can cause issues with Applicant Tracking Systems (ATS).
+1. Vector icons were chosen over Font Awesome
+   because the font renders icons as Unicode characters in PDFs,
+   which appear as random symbols of standard fonts when copied.
+   This can cause issues with Applicant Tracking Systems (ATS).
    Instead, the required SVG icons were downloaded from their website,
    placed in the `graphics` directory, and converted to PDF using the following commands.
    The second command, while not strictly necessary,
