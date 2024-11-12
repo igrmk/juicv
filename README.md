@@ -97,3 +97,12 @@ The following CV has been compiled from the [examples/igrmk-net.tex](examples/ig
    Since events in the CV can exist without any content,
    I created a special event without content by copying the paragraph hook code from `ltsect.dtx`
    to make LaTeX recognize the event (which is a subsection) as having content.
+
+3. The vertical spacing of headings appears
+   to depend heavily on justification settings
+   (e.g., whether the heading is typeset as ragged or justified).
+   I chose to always typeset headings as ragged-right,
+   as this generally makes more sense for headings
+   and results in more compact vertical spacing.
+   If a heading needs to be typeset as justified,
+   various spacing adjustments are required.
