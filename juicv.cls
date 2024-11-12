@@ -30,9 +30,9 @@
 \setlength{\parindent}{0pt}
 \pagenumbering{gobble}
 \newlength{\normalToNormalSpacingAdjustment}
-\setlength{\normalToNormalSpacingAdjustment}{3pt}
+\setlength{\normalToNormalSpacingAdjustment}{2.8pt}
 \newlength{\normalToSmallSpacingAdjustment}
-\setlength{\normalToSmallSpacingAdjustment}{2.2pt}
+\setlength{\normalToSmallSpacingAdjustment}{2pt}
 \newlength{\smallToSmallSpacingAdjustment}
 \setlength{\smallToSmallSpacingAdjustment}{1.3pt}
 
