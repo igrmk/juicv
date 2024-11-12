@@ -49,7 +49,11 @@ The following CV has been compiled from the [examples/igrmk-net.tex](examples/ig
    rephrasing those lines. Unfortunately, there is no reliable way in LaTeX
    to completely prevent this issue.
 
-   You can also use various tools, like `mutool`, to verify proper parsing.
+   You can also use tools like `mutool` to verify proper parsing:
+
+   ~~~bash
+   mutool draw -F text -o john.doe.txt john.doe.pdf
+   ~~~
 
 2. To evaluate your CV, you can use services like [Resume Worded](https://resumeworded.com/).
    While some of their suggestions may seem extreme — such as recommending numbers
