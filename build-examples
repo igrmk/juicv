@@ -20,7 +20,7 @@ scope="all"
 prefix=""
 create_png=false
 
-available_cv_kinds=(full head net hft python)
+available_cv_kinds=(full head net hft python go)
 available_scopes=("all" "${available_cv_kinds[@]}")
 comma_separated_available_scopes=$(printf ", %s" "${available_scopes[@]}")
 comma_separated_available_scopes=${comma_separated_available_scopes:2}
