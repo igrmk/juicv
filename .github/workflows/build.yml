@@ -27,7 +27,7 @@ jobs:
       - name: Build artefacts
         run: |
           set -euo pipefail
-          ./build-examples -p example
+          ./build-examples -p example -c
 
       - name: Release
         uses: softprops/action-gh-release@v2
