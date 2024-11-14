@@ -25,6 +25,19 @@ available_scopes=("all" "${available_cv_kinds[@]}")
 comma_separated_available_scopes=$(printf ", %s" "${available_scopes[@]}")
 comma_separated_available_scopes=${comma_separated_available_scopes:2}
 
+usage() {
+	log_normal "Usage: $0 [-h] [-s SCOPE] [-p PREFIX] [-c]"
+	log_normal
+	log_normal "Options:"
+	log_normal "  -h           Display this help message and exit"
+	log_normal "  -s SCOPE     Specify the examples scope. Must be one of:"
+	log_normal "               $comma_separated_available_scopes"
+	log_normal "               Default: all"
+	log_normal "  -p PREFIX    Add a prefix to the output file names"
+	log_normal "  -c           Create PNGs in the build output"
+}
+
+
 while getopts "hs:p:c" opt; do
 	case "$opt" in
 		s)
@@ -37,19 +50,20 @@ while getopts "hs:p:c" opt; do
 			create_png=true
 			;;
 		?)
-			log_normal "Usage: $0 [-h] [-s SCOPE] [-p PREFIX] [-c]"
-			log_normal
-			log_normal "Options:"
-			log_normal "  -h           Display this help message and exit"
-			log_normal "  -s SCOPE     Specify the examples scope. Must be one of:"
-			log_normal "               $comma_separated_available_scopes"
-			log_normal "               Default: all"
-			log_normal "  -p PREFIX    Add a prefix to the output file names"
-			log_normal "  -c           Create PNGs in the build output"
+			usage
 			exit 1
 			;;
 	esac
 done
+
+shift "$((OPTIND - 1))"
+
+if [[ "$#" -ne 0 ]]; then
+	log_normal "Only flags are allowed. Extra arguments provided."
+	log_normal
+	usage
+	exit 1
+fi
 
 is_valid_scope() {
 	for available_scope in "${available_scopes[@]}"; do
