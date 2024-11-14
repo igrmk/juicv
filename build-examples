@@ -67,7 +67,7 @@ fi
 
 is_valid_scope() {
 	for available_scope in "${available_scopes[@]}"; do
-		if [[ "$1" == "$available_scope" ]]; then
+		if [[ "$1" = "$available_scope" ]]; then
 			return 0
 		fi
 	done
@@ -105,7 +105,7 @@ build_file() {
 }
 
 for cv in "${available_cv_kinds[@]}"; do
-	if [[ "$scope" == "$cv" || "$scope" == "all" ]]; then
+	if [[ "$scope" = "$cv" || "$scope" = "all" ]]; then
 		build_file "igrmk-$cv"
 	fi
 done
