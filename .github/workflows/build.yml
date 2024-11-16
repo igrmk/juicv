@@ -27,7 +27,7 @@ jobs:
       - name: Build artefacts
         run: |
           set -euo pipefail
-          ./build-examples -s net -p example -c
+          ./build-examples -s net -s cover-letter -p example -c
 
       - name: Release
         uses: softprops/action-gh-release@v2
@@ -35,11 +35,7 @@ jobs:
           name: "Release ${{ github.ref_name }}"
           files: |
             juicv.cls
-            output/example-igrmk-head.pdf
-            output/example-igrmk-head.png
             output/example-igrmk-net.pdf
             output/example-igrmk-net.png
-            output/example-igrmk-hft.pdf
-            output/example-igrmk-hft.png
-            output/example-igrmk-python.pdf
-            output/example-igrmk-python.png
+            output/example-igrmk-cover-letter.pdf
+            output/example-igrmk-cover-letter.png

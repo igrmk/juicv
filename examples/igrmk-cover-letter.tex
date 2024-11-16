@@ -1,0 +1,88 @@
+\let\pdfcreationdate=\creationdate
+\documentclass[9pt,a4paper]{juicv}
+\geometry{left=1.25cm, right=1.25cm, top=1.5cm, bottom=1.5cm, columnsep=1cm}
+\usepackage{paracol}
+\usepackage[newcommands]{ragged2e}
+
+\newcommand{\myphone}{\href{tel:+440000000000}{+44 00 0000 0000}}
+\newcommand{\myemail}{\href{mailto:job@igr.mk}{job@igr.mk}}
+\IfFileExists{override.tex}{\input{override.tex}}{}
+
+\hypersetup{colorlinks, urlcolor=accentColor}
+\columnratio{0.73}
+
+\setromanfont{Inter}[
+    Extension      = .otf,
+    UprightFont    = *-Regular,
+    BoldFont       = *-Bold,
+    ItalicFont     = *-Italic,
+    BoldItalicFont = *-BoldItalic]
+
+\begin{document}
+\begin{paracol}{2}
+\cvMakeHeader
+    {Igor Mikushkin}
+    {}
+    {Lead Software Engineer, Software Architect}
+
+\vspace{3pt}
+\setlength{\parskip}{0.7em}
+Dear Hiring Team at Acme Bank,
+
+I am excited to apply for the Lead Software Engineer position within the banking platform team.
+With my extensive experience in the tech industry
+and hands-on expertise in designing scalable, secure systems,
+I am eager to contribute to the development of your next-generation core banking platform.
+
+At Start From Today, I launched a talent platform with 20K+ monthly active users.
+My role involved leading a cross-functional team of 10+ engineers, championing CI/CD practices,
+architecting a scalable microservices-based system (60+ services),
+contributing as a developer, and managing GCP infrastructure (250+ containers).
+Throughout this project, I effectively coordinated team efforts
+and fostered a collaborative work environment, demonstrating my leadership skills.
+This experience closely aligns with the responsibilities of the Lead Software Engineer position at Acme Bank.
+
+Previously, as a Software Engineer at CQG Inc.,
+I integrated 16 financial exchanges into a C++ microservices-based data feed,
+achieving sub-100 microsecond latency in co-located environments.
+This experience honed my expertise in low-latency systems and performance optimisation
+--- skills that could prove valuable in developing high-performance banking software.
+
+Your focus on cloud-native technologies and scalable microservices aligns perfectly with my background.
+I have significant experience developing and deploying distributed systems in Google Cloud,
+and my technical toolkit includes Python, Go, Kubernetes, and CI/CD pipelines --- all integral to your goals.
+My analytical thinking and attention to detail ensure that I deliver high-quality, robust solutions.
+
+I welcome the opportunity to discuss how my experience aligns with Acme Bank's objectives.
+Thank you for considering my application.
+
+\vspace{12pt}
+Best regards,\\
+Igor Mikushkin
+
+\newpage
+\switchcolumn
+\raggedright
+\setlength{\parskip}{0em}
+
+\cvRightSection{To}
+    Acme Bank
+
+\cvRightSection{From}
+    Igor Mikushkin\\
+    London, United Kingdom\\
+    \myphone\\
+    \myemail
+
+    \vspace{6pt}
+    {
+        \small
+        \href{https://linkedin.com/in/igrmk}{https://linkedin.com/in/igrmk}\\
+        \href{https://github.com/igrmk}{https://github.com/igrmk}\\
+        \href{https://coursera.org/learner/igrmk}{https://coursera.org/learner/igrmk}
+        \par
+    }
+
+\end{paracol}
+
+\end{document}

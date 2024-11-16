@@ -60,11 +60,14 @@
     \def\photo{#2}
     \def\tagline{#3}
     \begingroup
-        \begin{minipage}{1.5cm}%
-            \tikz
-            \path[rounded corners=0.3cm, fill overzoom image={\photo}]rectangle(1.5cm, 1.5cm);
-        \end{minipage}%
-        \hspace{0.5cm}%
+        \ifx\photo\empty
+        \else
+            \begin{minipage}{1.5cm}%
+                \tikz
+                \path[rounded corners=0.3cm, fill overzoom image={\photo}]rectangle(1.5cm, 1.5cm);
+            \end{minipage}%
+            \hspace{0.5cm}%
+        \fi
         \begin{minipage}{\dimexpr\linewidth-2cm}%
             \raggedright%
             {%
@@ -91,12 +94,14 @@
         {section}
         {1}
         {0pt}
-        {7.5pt}
-        {3pt}
+        {7pt}
+        {2.7pt}
         {\normalfont\Large\bfseries}
         *{%
             \raggedright%
-            #1\hspace{0.16cm}#2
+            #1%
+            \hspace{0.16cm}%
+            #2
         }%
     \makeatother
 }
@@ -108,7 +113,7 @@
         {1}
         {0pt}
         {7pt}
-        {2.5pt}
+        {2pt}
         {\normalfont\large\bfseries}
         *{\raggedright#1}
     \makeatother

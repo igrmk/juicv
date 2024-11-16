@@ -16,11 +16,11 @@ log_underlined() {
 	printf "%s\n" "${line//?/=}" >&2
 }
 
-scope="all"
+scopes=()
 prefix=""
 create_png=false
 
-available_cv_kinds=(full head net hft python go)
+available_cv_kinds=(full head net hft python go cover-letter)
 available_scopes=("all" "${available_cv_kinds[@]}")
 comma_separated_available_scopes=$(printf ", %s" "${available_scopes[@]}")
 comma_separated_available_scopes=${comma_separated_available_scopes:2}
@@ -41,7 +41,7 @@ usage() {
 while getopts "hs:p:c" opt; do
 	case "$opt" in
 		s)
-			scope="$OPTARG"
+			scopes+=("$OPTARG")
 			;;
 		p)
 			prefix="$OPTARG"
@@ -55,6 +55,11 @@ while getopts "hs:p:c" opt; do
 			;;
 	esac
 done
+
+if [[ ${#scopes[@]} -eq 0 ]]; then
+	log_normal "Building all available examples..."
+	scopes=("all")
+fi
 
 shift "$((OPTIND - 1))"
 
@@ -74,13 +79,19 @@ is_valid_scope() {
 	return 1
 }
 
-if ! is_valid_scope "$scope"; then
-	log_normal "Error: scope must be one of: $comma_separated_available_scopes"
-	exit 1
-fi
+for scope in "${scopes[@]}"; do
+	if ! is_valid_scope "$scope"; then
+		log_normal "Error: scope must be one of: $comma_separated_available_scopes"
+		exit 1
+	fi
+done
 
-cd "$(dirname "$0")"
-mkdir -p output
+for scope in "${scopes[@]}"; do
+	if [[ "$scope" = "all" ]]; then
+		scopes=("${available_cv_kinds[@]}")
+		break
+	fi
+done
 
 build_file() {
 	log_underlined "PROCESSING '$1'"
@@ -104,8 +115,9 @@ build_file() {
 	fi
 }
 
-for cv in "${available_cv_kinds[@]}"; do
-	if [[ "$scope" = "$cv" || "$scope" = "all" ]]; then
-		build_file "igrmk-$cv"
-	fi
+cd "$(dirname "$0")"
+mkdir -p output
+
+for cv in "${scopes[@]}"; do
+	build_file "igrmk-$cv"
 done
