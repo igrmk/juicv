@@ -55,7 +55,7 @@
     {\raisebox{1.7pt}{\tikz \fill[rounded corners=1pt] (0,0) rectangle (4.9pt, 2.4pt);}}
     {1.5pt}
 
-\newcommand{\cvMakeHeader}[3]{%
+\newcommand{\cvHeader}[3]{%
     \def\name{#1}
     \def\photo{#2}
     \def\tagline{#3}
@@ -87,8 +87,12 @@
             }
         \end{minipage}%
         \par%
-    \endgroup
-    \medskip
+    \endgroup%
+    \ifx\photo\empty%
+        \addvspace{6pt}%
+    \else%
+        \addvspace{12pt}%
+    \fi%
 }
 
 \newcommand{\cvLeftSection}[2]{%
