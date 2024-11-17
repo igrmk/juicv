@@ -12,7 +12,7 @@ The following CV has been compiled from the [examples/igrmk-net.tex](examples/ig
 
 ![CV](https://github.com/igrmk/juicv/releases/latest/download/example-igrmk-net.png)
 
-## Build your own CV
+## Build Your Own CV
 
 1. Install Tectonic, for example, on macOS using Homebrew:
    ~~~bash
@@ -31,7 +31,7 @@ The following CV has been compiled from the [examples/igrmk-net.tex](examples/ig
    tectonic john.doe.tex
    ~~~
 
-## Test your CV
+## Test Your CV
 
 1. We don't fully understand how Applicant Tracking Systems (ATS) work, but
    it’s clear that the first step is for them to correctly parse your CV.
@@ -59,6 +59,12 @@ The following CV has been compiled from the [examples/igrmk-net.tex](examples/ig
    While some of their suggestions may seem extreme — such as recommending numbers
    in every bullet point or using overly long, AI-generated phrases — the service
    is generally useful overall.
+
+## Cover Letters
+
+This class also allows you to typeset a cover letter.
+The following example was compiled from the
+![Cover Letter](https://github.com/igrmk/juicv/releases/latest/download/example-igrmk-cover-letter.png) file.
 
 ## Internals
 
