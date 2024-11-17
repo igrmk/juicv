@@ -64,7 +64,9 @@ The following CV has been compiled from the [examples/igrmk-net.tex](examples/ig
 
 This class also allows you to typeset a cover letter.
 The following example was compiled from the
-![Cover Letter](https://github.com/igrmk/juicv/releases/latest/download/example-igrmk-cover-letter.png) file.
+[examples/igrmk-cover-letter.tex](examples/igrmk-cover-letter.tex) file.
+
+![Cover Letter](https://github.com/igrmk/juicv/releases/latest/download/example-igrmk-cover-letter.png)
 
 ## Internals
 
