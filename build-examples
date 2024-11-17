@@ -20,8 +20,15 @@ scopes=()
 prefix=""
 create_png=false
 
-available_cv_kinds=(full head net hft python go cover-letter)
-available_scopes=("all" "${available_cv_kinds[@]}")
+readarray -t available_docs < <(find examples -type f -name "igrmk-*.tex")
+
+for i in "${!available_docs[@]}"; do
+	available_docs[i]="$(basename "${available_docs[$i]}" | sed -E 's/^igrmk-([^\.]*)(\.ignore)?\.tex$/\1/')"
+done
+
+readarray -t available_docs < <(printf "%s\n" "${available_docs[@]}" | sort)
+
+available_scopes=("all" "${available_docs[@]}")
 comma_separated_available_scopes=$(printf ", %s" "${available_scopes[@]}")
 comma_separated_available_scopes=${comma_separated_available_scopes:2}
 
@@ -36,7 +43,6 @@ usage() {
 	log_normal "  -p PREFIX    Add a prefix to the output file names"
 	log_normal "  -c           Create PNGs in the build output"
 }
-
 
 while getopts "hs:p:c" opt; do
 	case "$opt" in
@@ -88,7 +94,7 @@ done
 
 for scope in "${scopes[@]}"; do
 	if [[ "$scope" = "all" ]]; then
-		scopes=("${available_cv_kinds[@]}")
+		scopes=("${available_docs[@]}")
 		break
 	fi
 done
@@ -96,17 +102,23 @@ done
 build_file() {
 	log_underlined "PROCESSING '$1'"
 	tectonic -Z search-path=. -o output "examples/$1.tex"
-	prefixed_name="$1"
+	output_name="$1"
+	output_name="${output_name%.ignore}"
+
 	if [[ -n "$prefix" ]]; then
-		prefixed_name="$prefix-$1"
-		mv "output/$1.pdf" "output/$prefixed_name.pdf"
+		output_name="$prefix-$1"
 	fi
+
+	if [[ "$output_name" != "$1" ]]; then
+		mv "output/$1.pdf" "output/$output_name.pdf"
+	fi
+
 	log_normal "DONE"
 	log_normal
 
 	if [[ $create_png = true ]]; then
 		log_underlined "CREATING PNG FOR '$1'"
-		pdftoppm -singlefile -png -r 300 "output/$prefixed_name.pdf" "output/$prefixed_name" 2> >(
+		pdftoppm -singlefile -png -r 300 "output/$output_name.pdf" "output/$output_name" 2> >(
 			# Suppress warnings due to poppler bug: https://gitlab.freedesktop.org/poppler/poppler/-/issues/1524
 			grep -v -E "Couldn't link the profiles|Can't create Lab transform" >&2
 		)
@@ -118,6 +130,10 @@ build_file() {
 cd "$(dirname "$0")"
 mkdir -p output
 
-for cv in "${scopes[@]}"; do
-	build_file "igrmk-$cv"
+for scope in "${scopes[@]}"; do
+	if [[ -f "examples/igrmk-$scope.tex" ]]; then
+		build_file "igrmk-$scope"
+	elif [[ -f "examples/igrmk-$scope.ignore.tex" ]]; then
+		build_file "igrmk-$scope.ignore"
+	fi
 done

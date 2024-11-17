@@ -1,4 +1,4 @@
 /output/
-/local/
 .DS_Store
-/examples/override.tex
+?*.ignore
+?*.ignore.?*

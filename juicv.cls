@@ -79,6 +79,9 @@
             \vspace{1.5pt}
             {%
                 \large
+                \ifx\photo\empty
+                    \color{secondaryTextColor}
+                \fi
                 \tagline
                 \par
             }
