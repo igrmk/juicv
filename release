@@ -20,7 +20,7 @@ gawk -i inplace -v version="$version" '
 			strftime("%Y/%m/%d") \
 			" " \
 			version \
-			" LaTeX CV class focused on compactness]"
+			" LaTeX class for compact CVs and cover letters]"
 	}
 	1
 ' juicv.cls

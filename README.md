@@ -1,4 +1,4 @@
-# juicv, LaTeX CV class focused on compactness
+# juicv | LaTeX class for compact CVs and cover letters
 
 The class is loosely inspired by the [AltaCV](https://github.com/liantze/AltaCV) class, though it has
 diverged so significantly that none of the original code remains.
