@@ -251,13 +251,22 @@
     \fi
 }
 
-\newcommand{\cvTag}[1]{%
-    \mbox{%
-        \color{secondaryTextColor}#1%
-        \color{white},%
-    }%
-    \hspace{2.6pt}%
+\ExplSyntaxOn
+\NewDocumentEnvironment{cvTags}{+b}
+{
+    \seq_set_split:Nnn \l_tmpa_seq {&} {#1}
+    \int_step_inline:nn {\seq_count:N \l_tmpa_seq - 1}
+    {
+        \mbox{%
+            \tl_trim_spaces:n {\seq_item:Nn \l_tmpa_seq {##1}}%
+            \textcolor{white}{,}%
+        }%
+        \hspace{5.2pt}%
+    }
+    \tl_trim_spaces:n {\seq_item:Nn \l_tmpa_seq {\seq_count:N \l_tmpa_seq}}
 }
+{}
+\ExplSyntaxOff
 
 \newcommand{\cvSkill}[2]{%
     #1\hfill
