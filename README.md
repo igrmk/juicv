@@ -23,7 +23,8 @@ The following CV has been compiled from the [examples/igrmk-net.tex](examples/ig
    and both files from one of the examples (e.g., `igrmk-net.tex` and `igrmk-net.xmpdata`).
    Rename them to, say, `john.doe.tex` and `john.doe.xmpdata`.
 
-3. Customize both files according to your own experience.
+3. Customize both files to match your experience.
+   Don’t forget to update the identifier in your `john.doe.xmpdata` file.
 
 4. Run the following command to compile the CV:
 
