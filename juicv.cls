@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{juicv}[2024/11/20 v4.0.1 LaTeX class for compact CVs and cover letters]
+\ProvidesClass{juicv}[2024/11/21 v4.0.2 LaTeX class for compact CVs and cover letters]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{extarticle}}
 \ProcessOptions\relax
 \LoadClass{extarticle}
