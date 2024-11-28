@@ -132,7 +132,7 @@
     \def\date{#3}
     \def\location{#4}
     \def\link{#5}
-    \Needspace{3\baselineskip}
+    \Needspace{45pt}
     \makeatletter
     \@startsection
         {subsection}
