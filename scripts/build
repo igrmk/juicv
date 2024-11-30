@@ -132,6 +132,8 @@ build_file() {
 		mv "output/$1.pdf" "output/$output_name.pdf"
 	fi
 
+	rm output/*.aux output/*.out output/*.log output/*.xmpi
+
 	log_normal "DONE"
 	log_normal
 
