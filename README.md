@@ -14,22 +14,24 @@ The following CV has been compiled from the [examples/igrmk-net.tex](examples/ig
 
 ## Build Your Own CV
 
-1. Install Tectonic, for example, on macOS using Homebrew:
+1. Install your favourite TeX distribution, for example, on macOS using Homebrew:
+
    ~~~bash
-   brew install tectonic
+   brew install basictex
    ~~~
 
-2. Copy the `juicv.cls` class to your CV directory, along with `graphics` directory
-   and both files from one of the examples (e.g., `igrmk-net.tex` and `igrmk-net.xmpdata`).
-   Rename them to, say, `john.doe.tex` and `john.doe.xmpdata`.
+2. Clone the repo
 
-3. Customize both files to match your experience.
+3. Rename both files for one of the examples to, say, `john.doe.tex` and `john.doe.xmpdata`.
+   You might also want to remove the other files to avoid distractions
+
+4. Customize both files to match your experience.
    Don’t forget to update the identifier in your `john.doe.xmpdata` file.
 
-4. Run the following command to compile the CV:
+5. Run the following command to compile the CV:
 
    ~~~bash
-   tectonic john.doe.tex
+   ./scripts/build -s john.doe
    ~~~
 
 ## Test Your CV
@@ -115,3 +117,39 @@ The following example was compiled from the
    and results in more compact vertical spacing.
    If a heading needs to be typeset as justified,
    various spacing adjustments are required.
+
+4. Yeah, LaTeX, bitch. This is LaTeX, and that means it has to be painful.
+   PDFs, such as CVs, usually embed all the necessary data, like fonts and images.
+   This ensures they display exactly as created on any PDF viewer and operating system.
+
+   Images need a color profile to be reproduced accurately.
+   The `pdfx` package embeds the `sRGB.icc` color profile into your PDF for this purpose,
+   sourced from the [colorprofiles](https://ctan.org/pkg/colorprofiles) package.
+   For more details, see the [pdfx package documentation](https://mirrors.ctan.org/macros/latex/contrib/pdfx/pdfx.pdf).
+
+   Unfortunately, Tectonic — which I previously used — doesn’t fully support the
+   `pdfx` package. This results in an ill-formatted color profile being embedded in
+   your CV. See [this issue](https://github.com/tectonic-typesetting/tectonic/issues/838)
+   for more details.
+
+   To fix this, I had to switch to vanilla `XeTeX`. Otherwise, most PDF viewers
+   will open your CV, but Adobe Acrobat Reader, for instance, will not.
+   So, never use Tectonic for your CV.
+
+5. PDF metadata is stored in two different places within PDF files. And I have no idea why.
+
+   I’ve never been able to specify `\Keywords` in a way that prevents
+   `verapdf` from complaining about a mismatch between the two copies of this metadata.
+   So, just don’t specify it. It looks like it simply doesn’t work well.
+
+   Maybe the reason is this:
+   According to the [pdfx package documentation](https://mirrors.ctan.org/macros/latex/contrib/pdfx/pdfx.pdf),
+   metadata specified by the `\Keywords` attribute is written to the `dc:subject` key,
+   while `\Subject` is written to `dc:description`.
+   What the fuck?! Or could it just be a documentation bug?
+
+6. There isn’t a proper package manager for LaTeX
+   that can reliably reproduce the build environment.
+   To address this, I vendored all the packages I could.
+   However, some are OS- and architecture-specific,
+   so they still need to be installed for the build process.

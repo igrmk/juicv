@@ -16,18 +16,18 @@ jobs:
           sudo apt update
           sudo apt install -y poppler-utils
 
+      - name: Install TeX Live
+        uses: teatimeguest/setup-texlive-action@v3
+        with:
+          packages: xetex
+
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Install Tectonic
-        uses: wtfjoke/setup-tectonic@v3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build artefacts
         run: |
           set -euo pipefail
-          ./build-examples -s net -s cover-letter -p example -c
+          ./scripts/build -s net -s cover-letter -p example -c
 
       - name: Release
         uses: softprops/action-gh-release@v2

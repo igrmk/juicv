@@ -1,0 +1,3169 @@
+name 00texlive.installation
+category TLCore
+depend opt_location:https://mirror.ctan.org/systems/texlive/tlnet
+depend setting_available_architectures:
+depend setting_usertree:1
+
+name bigintcalc
+category Package
+revision 53172
+shortdesc Integer calculations on very large numbers
+longdesc This package provides expandable arithmetic operations with big
+longdesc integers that can exceed TeX's number limits.
+containersize 6504
+containerchecksum c801e5953008e8cd8521886496238f4f7a86a6c65a160255beb3fd6a41a48dd7bfa2da438f8e1ae4c79b51f769f0e07bcaa7c3c8aa6e1204ea656aca3d1f4620
+doccontainersize 456956
+doccontainerchecksum f5e7cc163157e429906489cb3cb94d8694c01be3c720e03b85bb24c7bd757391cf09e08f3d88df4ae7485978042e9d408fc5af0d93e016c82912479d40457079
+srccontainersize 14244
+srccontainerchecksum e829ad1e3a118e8fd0ea0e632740ed49db65603d6fdcc7d40126a048db5cc0f73c9f4aa64d81902794ed308ca31a153044a56ef37ac179918b24be71ae168f64
+runfiles size=10
+ tex/generic/bigintcalc/bigintcalc.sty
+catalogue-contact-bugs https://github.com/ho-tex/bigintcalc/issues
+catalogue-contact-repository https://github.com/ho-tex/bigintcalc
+catalogue-ctan /macros/latex/contrib/bigintcalc
+catalogue-license lppl1.3
+catalogue-topics arithmetic calculation
+catalogue-version 1.5
+
+name bitset
+category Package
+revision 53837
+shortdesc Handle bit-vector datatype
+longdesc This package defines and implements the data type bit set, a
+longdesc vector of bits. The size of the vector may grow dynamically.
+longdesc Individual bits can be manipulated.
+depend bigintcalc
+containersize 5712
+containerchecksum b1c9121312404d3daf6907623972c35e0f36cfb4197e589bd937c145506cb5a2d9d8c1f665ae3b4d3ec093e55bb146c0b67cd0858425b704fe29989b9924ccb7
+doccontainersize 616520
+doccontainerchecksum a5a3ba9d27dc3d9658c1d261f798fdc5e6dc4cedd85287ef77d2a0341048d71f8575d4fbd711e499233e0991c51765953931d87d40dd22fa2a4e8ecb9f2a8dab
+srccontainersize 14628
+srccontainerchecksum 40580c17ac81137d533eb013ed14bc092281b354ce42883c0a3c33ee7843be7ebed0ce642746ba9e173bedf8ee6f6c243b65e692ef2a50654ada23e323166c89
+runfiles size=9
+ tex/generic/bitset/bitset.sty
+catalogue-contact-bugs https://github.com/ho-tex/bitset/issues
+catalogue-contact-repository https://github.com/ho-tex/bitset
+catalogue-ctan /macros/latex/contrib/bitset
+catalogue-license lppl1.3
+catalogue-topics data-manip
+catalogue-version 1.3
+
+name colorprofiles
+category Package
+revision 49086
+shortdesc Collection of free ICC profiles
+longdesc This package collects free ICC profiles that can be used by
+longdesc color profile aware applications/tools like the pdfx package,
+longdesc as well as TeX and LaTeX packages to access them.
+containersize 87972
+containerchecksum 49be492e62fcd615b08bb6a32767cac54a9535ab859d2a27d1c84788d4e168df2a10133e5408ab1bd3a802ffa8465a61c4144cd9cbafc6fa98f995cb7af89381
+doccontainersize 27632
+doccontainerchecksum ab7cabd369cdde5c2e5108b4d75d71bfa5e6b44d7ecc2eda25509078f26bfbc8515dd10a6dd82adab979170e12552fbecffca1f5bd3a1105db21b31097ec5f12
+runfiles size=33
+ tex/generic/colorprofiles/FOGRA39L_coated.icc
+ tex/generic/colorprofiles/colorprofiles.sty
+ tex/generic/colorprofiles/colorprofiles.tex
+ tex/generic/colorprofiles/sRGB.icc
+catalogue-ctan /support/colorprofiles
+catalogue-license other-free
+catalogue-topics colour
+catalogue-version 20181105
+
+name enumitem
+category Package
+revision 51423
+shortdesc Control layout of itemize, enumerate, description
+longdesc This package provides user control over the layout of the three
+longdesc basic list environments: enumerate, itemize and description. It
+longdesc supersedes both enumerate and mdwlist (providing
+longdesc well-structured replacements for all their funtionality), and
+longdesc in addition provides functions to compute the layout of labels,
+longdesc and to 'clone' the standard environments, to create new
+longdesc environments with counters of their own.
+containersize 13756
+containerchecksum d49701368b0ce611f5cfb52ec06616edc27b2dedb99230983ffc59c4c1eadc265a8afd3c94f1e57920de875c4ec684fec007dceca59fd4f4008bb5572c13880c
+doccontainersize 163332
+doccontainerchecksum b61f62bb0da61c7124f661739ebfaff6147d73899511d8b1a1d4b98b31bc596c3994acfd73c3c1922f5cc8a05c6a98572254067718be394c48976a10b2351503
+runfiles size=13
+ tex/latex/enumitem/enumitem.sty
+catalogue-contact-home http://www.texnia.com/enumitem.html
+catalogue-contact-repository https://github.com/jbezos/enumitem
+catalogue-ctan /macros/latex/contrib/enumitem
+catalogue-license mit
+catalogue-topics list
+catalogue-version 3.9
+
+name environ
+category Package
+revision 56615
+shortdesc A new interface for environments in LaTeX
+longdesc The package provides the \collect@body command (as in amsmath),
+longdesc as well as a \long version \Collect@Body, for collecting the
+longdesc body text of an environment. These commands are used to define
+longdesc a new author interface to creating new environments. For
+longdesc example, \NewEnviron{test}, wraps the entire environment body
+longdesc in square brackets, doing the right thing in ignoring leading
+longdesc and trailing spaces.
+depend trimspaces
+containersize 1884
+containerchecksum c8dec70e56651a89ae8da15abc0ad81cc2edb4487837469238e2adc0e7c58cae4c5da82b637a3336839b50103e3d846c5cee8c73141488f644469a0f3e9d363f
+doccontainersize 156300
+doccontainerchecksum 78d4d3f570470619c938687a6c9a6925aad901d781e3e893bd731a49bb8eca62bf1870e68d84f7125e10d91d7bec02a323ae42278ff59c04d7e33eefa2261496
+srccontainersize 6420
+srccontainerchecksum b30607d21bbf5ddf1c7d36bd9173a16d91bdfcfa004782be50e50f17bf54d94e943d5e524e2331b75f3ce65e81193ba98e69ab56c38959d632007f5b0a87bd6a
+runfiles size=2
+ tex/latex/environ/environ.sty
+catalogue-ctan /macros/latex/contrib/environ
+catalogue-license lppl
+catalogue-topics macro-supp
+catalogue-version 0.3
+
+name etoolbox
+category Package
+revision 56554
+shortdesc e-TeX tools for LaTeX
+longdesc The package is a toolbox of programming facilities geared
+longdesc primarily towards LaTeX class and package authors. It provides
+longdesc LaTeX frontends to some of the new primitives provided by e-TeX
+longdesc as well as some generic tools which are not strictly related to
+longdesc e-TeX but match the profile of this package. Note that the
+longdesc initial versions of this package were released under the name
+longdesc elatex. The package provides functions that seem to offer
+longdesc alternative ways of implementing some LaTeX kernel commands;
+longdesc nevertheless, the package will not modify any part of the LaTeX
+longdesc kernel.
+containersize 8752
+containerchecksum b4c2ba570b1636b7ccd741c8960335f4863fb7242253be6c071100b64ce0d6ffc1bcc9da5e9bc65830ae5e34cb4cf887220585c0006d7afce0af3ca95f96b36e
+doccontainersize 237928
+doccontainerchecksum 15f5f37471b991c1363e7d34c419c4defe1920522d6f666c383ce31b25b412d40a1dd6ca1c0fdb0e56ef3c7e529215964957c5a2dc55522bec60e79bdd972947
+runfiles size=13
+ tex/latex/etoolbox/etoolbox.def
+ tex/latex/etoolbox/etoolbox.sty
+catalogue-contact-bugs https://github.com/josephwright/etoolbox/issues
+catalogue-contact-repository https://github.com/josephwright/etoolbox/
+catalogue-ctan /macros/latex/contrib/etoolbox
+catalogue-license lppl1.3c
+catalogue-topics macro-supp etex
+catalogue-version 2.5k
+
+name everyshi
+category Package
+revision 57001
+shortdesc Take action at every \shipout
+longdesc This package provides hooks into \sshipout called \EveryShipout
+longdesc and \AtNextShipout analogous to \AtBeginDocument. With the
+longdesc introduction of the LaTeX hook management this package became
+longdesc obsolete in 2020 and is only provided for backwards
+longdesc compatibility. For current versions of LaTeX it is only mapping
+longdesc the hooks to the original everyshi macros. In case you use an
+longdesc older LaTeX format, everyshi will automatically fall back to
+longdesc its old implementation by loading everyshi-2001-05-15.
+containersize 2000
+containerchecksum b6219fdc669847a30ad2359d6b0888eec0980114d5385c018e9ddfd0876dc52390e1e8ffae5d2850cfa140833365c30024456bfacde6615bdbe5101e7059d52f
+doccontainersize 132236
+doccontainerchecksum 2a05f4b42c1a85b4af8fb3881d1e32d0cb8fad7070bd8eb83632b50e387083a5c8fd264b61b70416451f56a97e1c0702507bd50c534ab7baf975372d854a97a5
+srccontainersize 4772
+srccontainerchecksum 4ae653fe3cf9dcfa51f461ca72954eeef666a6324321cb5e6416d7e2baa5320115818a26f1970bf7654acec9454e5174262578fc4d28f251d3476d27d6d4d9d5
+runfiles size=2
+ tex/latex/everyshi/everyshi-2001-05-15.sty
+ tex/latex/everyshi/everyshi.sty
+catalogue-also bophook atbegshi
+catalogue-ctan /macros/latex/contrib/everyshi
+catalogue-license lppl1.3c
+catalogue-topics defer-stuff obsolete
+catalogue-version 4.00
+
+name extsizes
+category Package
+revision 17263
+shortdesc Extend the standard classes' size options
+longdesc Provides classes extarticle, extreport, extletter, extbook and
+longdesc extproc which provide for documents with a base font size from
+longdesc 8-20pt. There is also a LaTeX package, extsizes.sty, which can
+longdesc be used with nonstandard document classes. But it cannot be
+longdesc guaranteed to work with any given class.
+containersize 11704
+containerchecksum 5b000d25ff594af2895408f0d83eeb0e7d6dd5604c53d5acd835898197e44fb88ed2469039489b75b45678f28182dc88a0af56ed1b1730be2ce41e6e81f13b7c
+doccontainersize 195100
+doccontainerchecksum 9bfa898f7eab416beaee2938902fc0f3a5ddcf1ce972f30d18a683756fb53bc8f66ef1220bd3bbe6ca6a473959a67c55c18a7996eb095ef301da8b594f42d3ae
+runfiles size=35
+ tex/latex/extsizes/autopagewidth.sty
+ tex/latex/extsizes/extarticle.cls
+ tex/latex/extsizes/extbook.cls
+ tex/latex/extsizes/extletter.cls
+ tex/latex/extsizes/extproc.cls
+ tex/latex/extsizes/extreport.cls
+ tex/latex/extsizes/extsizes.sty
+ tex/latex/extsizes/size14.clo
+ tex/latex/extsizes/size17.clo
+ tex/latex/extsizes/size20.clo
+ tex/latex/extsizes/size8.clo
+ tex/latex/extsizes/size9.clo
+catalogue-ctan /macros/latex/contrib/extsizes
+catalogue-license lppl
+catalogue-topics book-pub class
+catalogue-version 1.4a
+
+name fontspec
+category Package
+revision 71237
+shortdesc Advanced font selection in XeLaTeX and LuaLaTeX
+longdesc Fontspec is a package for XeLaTeX and LuaLaTeX. It provides an
+longdesc automatic and unified interface to feature-rich AAT and
+longdesc OpenType fonts through the NFSS in LaTeX running on XeTeX or
+longdesc LuaTeX engines. The package requires the l3kernel and xparse
+longdesc bundles from the LaTeX3 development team.
+depend euenc
+depend iftex
+depend l3kernel
+depend l3packages
+depend lm
+depend xunicode
+containersize 27416
+containerchecksum 4522aa49135438eef9b8b7a426f7c31a354fd672b59be0914319bb059c95c53c4e160fe9038e81160aef4e833d6390518689a1c2e8ff41873810f69ac4af6868
+doccontainersize 1157776
+doccontainerchecksum 8cfd96fa7324af42ef712bbdfee065b54af7026aef2c0818277bb0318dda8c6d6406ecc8e76c91676b605693e8dc364e0bdcee63aa823cd309f584adf84627e7
+srccontainersize 85944
+srccontainerchecksum ba56d0d9ab9a653f0564b4e293580be8dc43c867f7c4caf63ae1927799f41f1ee45059428a6f60a93b5f57df22b024d8173a99cd8fb1eb9d285160553a1bdfda
+runfiles size=82
+ tex/latex/fontspec/fontspec-luatex.sty
+ tex/latex/fontspec/fontspec-xetex.sty
+ tex/latex/fontspec/fontspec.cfg
+ tex/latex/fontspec/fontspec.lua
+ tex/latex/fontspec/fontspec.sty
+catalogue-contact-bugs https://github.com/latex3/fontspec/issues
+catalogue-contact-repository https://github.com/latex3/fontspec/
+catalogue-ctan /macros/unicodetex/latex/fontspec
+catalogue-license lppl1.3c
+catalogue-topics font-sel luatex xetex
+catalogue-version 2.9e
+
+name geometry
+category Package
+revision 61719
+shortdesc Flexible and complete interface to document dimensions
+longdesc The package provides an easy and flexible user interface to
+longdesc customize page layout, implementing auto-centering and
+longdesc auto-balancing mechanisms so that the users have only to give
+longdesc the least description for the page layout. For example, if you
+longdesc want to set each margin 2cm without header space, what you need
+longdesc is just \usepackage[margin=2cm,nohead]{geometry}. The package
+longdesc knows about all the standard paper sizes, so that the user need
+longdesc not know what the nominal 'real' dimensions of the paper are,
+longdesc just its standard name (such as a4, letter, etc.). An important
+longdesc feature is the package's ability to communicate the paper size
+longdesc it's set up to the output (whether via DVI \specials or via
+longdesc direct interaction with pdf(La)TeX).
+depend graphics
+depend iftex
+containersize 8712
+containerchecksum ed64996404299bd8379197b293baed752ff064e04eec87ffafdfd55cf21c2c48174560eb1c3bcdb0b06190badb9d9cc699aaa7a2ac8a5c537b0c818a423770fc
+doccontainersize 864536
+doccontainerchecksum a58ab22ae6df349d81b5ddf18a4e9b7dbb5804a497bbaff42acde18ca59fe8a19bfee34293debc23e44c690456e6a1b1d87614fbb85dc6cb3b3b7d330fc866d7
+srccontainersize 47940
+srccontainerchecksum f4e1e8c0f5b8f443c8f5e6ad948cb1736ed944384daec20e9402c871872e86248b3167c72e07fc94fe32ef6ab36c17d2f177135ccf99f68d1c892af0a695bcbf
+runfiles size=11
+ tex/latex/geometry/geometry.sty
+catalogue-also vmargin typearea geometry-de
+catalogue-contact-bugs https://github.com/LaTeX-Package-Repositories/geometry/issues
+catalogue-contact-repository https://github.com/LaTeX-Package-Repositories/geometry
+catalogue-ctan /macros/latex/contrib/geometry
+catalogue-license lppl1.3c
+catalogue-topics geometry
+catalogue-version 5.9
+
+name gettitlestring
+category Package
+revision 53170
+shortdesc Clean up title references
+longdesc Cleans up the title string (removing \label commands) for
+longdesc packages (such as nameref) that typeset such strings.
+containersize 2780
+containerchecksum 101ad92c2fba5c43321d8e12754190e09b0442508799dbb6bac23d5cbe96c470425a4cc10a28441408ac5a1c406e18aab7567f2464e48c2692fa38af1e23a16f
+doccontainersize 317824
+doccontainerchecksum f9e33fbe89df368c4c5dfd855f2fc0fa8c4d1eec5c0ab925b0a28b9f021fd2d88521895233d12783a023e40d70b05a0e849d4551f79fd4b8d0af72fb60a1af32
+srccontainersize 6424
+srccontainerchecksum 9bddc79e0f839a21ebb76e21e20ba5a26971f4192ebc2209468a780a15e5e5f61a328df5f033c115452751a31d1e6dc2e6e238097d2cbdbffa33f56ca420b602
+runfiles size=3
+ tex/generic/gettitlestring/gettitlestring.sty
+catalogue-contact-bugs https://github.com/ho-tex/gettitlestring/issues
+catalogue-contact-repository https://github.com/ho-tex/gettitlestring
+catalogue-ctan /macros/latex/contrib/gettitlestring
+catalogue-license lppl1.3
+catalogue-topics macro-supp
+catalogue-version 1.6
+
+name graphics
+category Package
+revision 72739
+catalogue latex-graphics
+shortdesc The LaTeX standard graphics bundle
+longdesc This is a collection of LaTeX packages for: producing colour
+longdesc including graphics (eg PostScript) files rotation and scaling
+longdesc of text in LaTeX documents. It comprises the packages color,
+longdesc graphics, graphicx, trig, epsfig, keyval, and lscape.
+depend graphics-cfg
+depend graphics-def
+containersize 15904
+containerchecksum a5c858506c03e1f9f557f397673c00afc3c79c949b449d538398ffb1199b9dd31cffc7b66724a5c7776685dc7bcf38d7077042ac0bfecdd1c80a7245bd244b29
+doccontainersize 2491244
+doccontainerchecksum 97934f9083786d72979327549f85bcf2a3a0ed19c702d929fba24c12cb417229595263a17b679926d5326aefc3bd99d728298a01fc163c57e6791da3a04aae1e
+srccontainersize 57144
+srccontainerchecksum e2d7bc14aad85aa216d97632d27a83869f9540200ab250085d06ca7147fbff51831a43823d7ed1bb5a1d52df064be8f2401198d4a24f0504bfa9fadfee651798
+runfiles size=36
+ tex/latex/graphics/color.sty
+ tex/latex/graphics/dvipdf.def
+ tex/latex/graphics/dvipsnam.def
+ tex/latex/graphics/dvipsone.def
+ tex/latex/graphics/dviwin.def
+ tex/latex/graphics/emtex.def
+ tex/latex/graphics/epsfig.sty
+ tex/latex/graphics/graphics-2017-06-25.sty
+ tex/latex/graphics/graphics.sty
+ tex/latex/graphics/graphicx.sty
+ tex/latex/graphics/keyval.sty
+ tex/latex/graphics/lscape.sty
+ tex/latex/graphics/mathcolor.ltx
+ tex/latex/graphics/pctex32.def
+ tex/latex/graphics/pctexhp.def
+ tex/latex/graphics/pctexps.def
+ tex/latex/graphics/pctexwin.def
+ tex/latex/graphics/rotating.sty
+ tex/latex/graphics/tcidvi.def
+ tex/latex/graphics/trig.sty
+ tex/latex/graphics/truetex.def
+catalogue-contact-bugs https://www.latex-project.org/bugs/
+catalogue-contact-home https://www.latex-project.org/
+catalogue-ctan /macros/latex/required/graphics
+catalogue-license lppl1.3c
+catalogue-topics graphics collection
+
+name graphics-cfg
+category Package
+revision 41448
+shortdesc Sample configuration files for LaTeX color and graphics
+longdesc This bundle includes color.cfg and graphics.cfg files that set
+longdesc default "driver" options for the color and graphics packages.
+longdesc It contains support for defaulting the new LuaTeX option which
+longdesc was added to graphics and color in the 2016-02-01 release. The
+longdesc LuaTeX option is only used for LuaTeX versions from 0.87, older
+longdesc versions use the pdfTeX option as before.
+containersize 1160
+containerchecksum e1015d360b56f63f1b9790daf16e2101e6af995bd1e45288ea604ae94e20196cab22e7e54d318aa79fa386123032a928be70a57154d409321e04f03ecf97ab75
+doccontainersize 876
+doccontainerchecksum dbcfdf635c2816f305205915119e1f6acba816c17b683622a8a32c361d75338376426b258c1fa3271abc1d7ad2a520ac85092a7b3bfbac6463106449bc906ae4
+runfiles size=2
+ tex/latex/graphics-cfg/color.cfg
+ tex/latex/graphics-cfg/graphics.cfg
+catalogue-also color graphics
+catalogue-contact-repository https://github.com/latex3/graphics-cfg
+catalogue-ctan /macros/latex/contrib/graphics-cfg
+catalogue-license pd
+catalogue-topics graphics colour
+
+name graphics-def
+category Package
+revision 70970
+shortdesc Colour and graphics option files
+longdesc This bundle is a combined distribution consisting of dvips.def,
+longdesc pdftex.def, luatex.def, xetex.def, dvipdfmx.def, and
+longdesc dvisvgm.def driver option files for the LaTeX graphics and
+longdesc color packages. It is hoped that by combining their source
+longdesc repositories at https://github.com/latex3/graphics-def it will
+longdesc be easier to coordinate updates.
+containersize 10728
+containerchecksum 3767b343bdf5e406f5d93ddce9d6a216773485eaa745e05f96270311f88add172ffea50989519e5fd3c3ee484bf63c6dbb5280b13afb215fc33f86408a5184c7
+doccontainersize 604
+doccontainerchecksum 71137ab8417be762cfebe388fc0ec5fcccf6283c24045648b65a4aa66ea73791cadda023f470b7c626a66a183e38257c265008a8ab43e5c2d3acf632a9630520
+runfiles size=23
+ tex/latex/graphics-def/dvipdfmx.def
+ tex/latex/graphics-def/dvips.def
+ tex/latex/graphics-def/dvisvgm.def
+ tex/latex/graphics-def/luatex.def
+ tex/latex/graphics-def/pdftex.def
+ tex/latex/graphics-def/xetex.def
+catalogue-contact-bugs https://github.com/latex3/graphics-def/issues
+catalogue-contact-home https://www.latex-project.org/
+catalogue-contact-repository https://github.com/latex3/graphics-def
+catalogue-ctan /macros/latex/contrib/graphics-def
+catalogue-license lppl1.3c
+catalogue-topics graphics-drv
+
+name hycolor
+category Package
+revision 53584
+shortdesc Implements colour for packages hyperref and bookmark
+longdesc This package provides the code for the color option that is
+longdesc used by packages hyperref and bookmark. It is not intended as
+longdesc package for the user.
+containersize 4044
+containerchecksum 5269044c5b462f13c78e80d28f7237f2d6e353da98db50267a5c4f01b22d565b0300c689470f6eb1ef9af7b66c1068c1d40d7a30ae01f30e7b3649189a7e7fbd
+doccontainersize 375200
+doccontainerchecksum 79e4c83b952182ea89b2ae7a1abdafd771359baadd34fce8d573d7449b24908a5bbf515d16d73fd088e7add82c143a458b2c196c125e5b492033cb36da63eb6d
+srccontainersize 9676
+srccontainerchecksum 587ca9470aaa935119d142a970931d89444d2d64ec311ba74a697fa4cd982be999e7e62ee9924dd6028f2b9411657d6b1cf4b6cb9887d08cdb0b969e8a334fd7
+runfiles size=7
+ tex/latex/hycolor/hycolor.sty
+ tex/latex/hycolor/xcolor-patch.sty
+catalogue-contact-bugs https://github.com/ho-tex/hycolor/issues
+catalogue-contact-repository https://github.com/ho-tex/hycolor
+catalogue-ctan /macros/latex/contrib/hycolor
+catalogue-license lppl1.3
+catalogue-topics colour
+catalogue-version 1.10
+
+name hyperref
+category Package
+revision 72773
+shortdesc Extensive support for hypertext in LaTeX
+longdesc The hyperref package is used to handle cross-referencing
+longdesc commands in LaTeX to produce hypertext links in the document.
+longdesc The package provides backends for the \special set defined for
+longdesc HyperTeX DVI processors; for embedded pdfmark commands for
+longdesc processing by Acrobat Distiller (dvips and Y&Y's dvipsone); for
+longdesc Y&Y's dviwindo; for PDF control within pdfTeX and dvipdfm; for
+longdesc TeX4ht; and for VTeX's pdf and HTML backends. The package is
+longdesc distributed with the backref and nameref packages, which make
+longdesc use of the facilities of hyperref. The package depends on the
+longdesc author's kvoptions, ltxcmds and refcount packages.
+depend atbegshi
+depend auxhook
+depend bitset
+depend etexcmds
+depend gettitlestring
+depend hycolor
+depend iftex
+depend infwarerr
+depend intcalc
+depend kvdefinekeys
+depend kvoptions
+depend kvsetkeys
+depend letltxmacro
+depend ltxcmds
+depend pdfescape
+depend pdftexcmds
+depend refcount
+depend rerunfilecheck
+depend stringenc
+depend url
+depend zapfding
+containersize 88712
+containerchecksum dece11f0aae3c06f12fabc165a5c0b4505165b721c2d1c357d813157befea5874a22fef3396200cb33e164270cd97b10c5949be16029c1b6bbae70cc625cc59c
+doccontainersize 3510108
+doccontainerchecksum 5a783e7171d6dd332d60cff15f5eb35750d325d2d2df8f97ec5a65302a845d590412286276f0c3a7e65b22fc2647251b2397763e21c6f723ef4887d9c1d16420
+srccontainersize 417980
+srccontainerchecksum e285a35eb6d42b0e2b5e478b2a761799d98eb6d38de4cbdd7fedba5aa5d37dbe35d6e2109a136f94fd32469c9de8e464dd722365af2c13b5c1616bae67244881
+runfiles size=200
+ tex/latex/hyperref/backref.sty
+ tex/latex/hyperref/hdvipdfm.def
+ tex/latex/hyperref/hdvips.def
+ tex/latex/hyperref/hdvipson.def
+ tex/latex/hyperref/hdviwind.def
+ tex/latex/hyperref/hluatex.def
+ tex/latex/hyperref/hpdftex.def
+ tex/latex/hyperref/htex4ht.cfg
+ tex/latex/hyperref/htex4ht.def
+ tex/latex/hyperref/htexture.def
+ tex/latex/hyperref/hvtex.def
+ tex/latex/hyperref/hvtexhtm.def
+ tex/latex/hyperref/hvtexmrk.def
+ tex/latex/hyperref/hxetex.def
+ tex/latex/hyperref/hyperref-patches.sty
+ tex/latex/hyperref/hyperref.sty
+ tex/latex/hyperref/hypertex.def
+ tex/latex/hyperref/minitoc-hyper.sty
+ tex/latex/hyperref/nameref.sty
+ tex/latex/hyperref/nohyperref.sty
+ tex/latex/hyperref/ntheorem-hyper.sty
+ tex/latex/hyperref/pd1enc.def
+ tex/latex/hyperref/pdfmark.def
+ tex/latex/hyperref/psdextra.def
+ tex/latex/hyperref/puarenc.def
+ tex/latex/hyperref/puenc-extra.def
+ tex/latex/hyperref/puenc.def
+ tex/latex/hyperref/puvnenc.def
+ tex/latex/hyperref/xr-hyper.sty
+catalogue-contact-bugs https://github.com/latex3/hyperref/issues
+catalogue-contact-home https://github.com/latex3/hyperref
+catalogue-ctan /macros/latex/contrib/hyperref
+catalogue-license lppl1.3
+catalogue-topics hyper pdf-feat adobe-distiller form-fillin etex
+catalogue-version 7.01l
+
+name iftex
+category Package
+revision 61910
+shortdesc Am I running under pdfTeX, XeTeX or LuaTeX?
+longdesc The package, which works both for Plain TeX and for LaTeX,
+longdesc defines the \ifPDFTeX, \ifXeTeX, and \ifLuaTeX conditionals for
+longdesc testing which engine is being used for typesetting. The package
+longdesc also provides the \RequirePDFTeX, \RequireXeTeX, and
+longdesc \RequireLuaTeX commands which throw an error if pdfTeX, XeTeX
+longdesc or LuaTeX (respectively) is not the engine in use.
+containersize 3132
+containerchecksum ac7958c10c0cd5ee3a82273632445423c347bc9c5fc2015b97fdb7018d7a07b7e1316761698973b325314e945fba6c86be0dd49e058ecf74a55ccf2b9df8774f
+doccontainersize 228940
+doccontainerchecksum d51b452532fcffce4b1078ab26396bc4f8739e2c3025917b4ce88af2e5aecfbe0a54e481f1683afe2d25259c6f73e27be8f257beb1b599f9817dc37df427fd70
+runfiles size=7
+ tex/generic/iftex/ifetex.sty
+ tex/generic/iftex/ifluatex.sty
+ tex/generic/iftex/ifpdf.sty
+ tex/generic/iftex/iftex.sty
+ tex/generic/iftex/ifvtex.sty
+ tex/generic/iftex/ifxetex.sty
+catalogue-also ifetex ifluatex ifpdf ifvtex ifxetex
+catalogue-contact-bugs https://github.com/latex3/iftex/issues
+catalogue-contact-repository https://github.com/latex3/iftex
+catalogue-ctan /macros/generic/iftex
+catalogue-license lppl1.3c
+catalogue-topics env-query macro-gen
+catalogue-version 1.0f
+
+name infwarerr
+category Package
+revision 53023
+shortdesc Complete set of information/warning/error message macros
+longdesc This package provides a complete set of macros for information,
+longdesc warning and error messages. Under LaTeX, the commands are
+longdesc wrappers for the corresponding LaTeX commands; under Plain TeX
+longdesc they are available as complete implementations.
+containersize 2668
+containerchecksum a41fd6f2ee199e460950fdd31484be7e949a5e36ca740daaf3a1ffa01103d865f573c8ffe0859a8629456786cabf2f1751dbd828cb5d26356b1973960c854261
+doccontainersize 284912
+doccontainerchecksum 2830f622e2ea8e5b3427a9d924dd5f45f0c63a8a6de82e261102ca2c3f3afd7b781a7e0d50903dc8d8c1bee0674503f3ab935fe81dd9490d4310650097c4ffa6
+srccontainersize 5712
+srccontainerchecksum ccc6e1f7a63c10fed449c390b2283ac44b94c33a453f1146658082c888723ad8223bea01b71545d7f57f89fb8c8373f1a8329aab7255b7d17fd36853456cfbe9
+runfiles size=3
+ tex/generic/infwarerr/infwarerr.sty
+catalogue-contact-bugs https://github.com/ho-tex/infwarerr/issues
+catalogue-contact-repository https://github.com/ho-tex/infwarerr
+catalogue-ctan /macros/latex/contrib/infwarerr
+catalogue-license lppl1.3
+catalogue-topics messages
+catalogue-version 1.5
+
+name intcalc
+category Package
+revision 53168
+shortdesc Expandable arithmetic operations with integers
+longdesc This package provides expandable arithmetic operations with
+longdesc integers, using the e-TeX extension \numexpr if it is
+longdesc available.
+containersize 5436
+containerchecksum e1087a7ab3f1d695bc20435ef0bb2b806d1cca71eb792fcf46e6c2fc6d819de2ff623a65593b65d5bf228309e3e3d5210ae1fb1452356f97a5ecb45921a7ce0f
+doccontainersize 423196
+doccontainerchecksum f3cc5dba031957d77cdf39d902eeda96c8405efef52352109a7bfb187e363321d31120b4c66ed4b2e990fbd7085b927599a0956749e4303611cdbec5d9d7179e
+srccontainersize 12576
+srccontainerchecksum c3fc56d3ece265756a6c19684e7c2f9717df7f65176a640bcf6fede941468c8a426abb610ebf9955de920adaf2c96165f91f7314f48701121dfc4381f921d42b
+runfiles size=8
+ tex/generic/intcalc/intcalc.sty
+catalogue-contact-bugs https://github.com/ho-tex/intcalc/issues
+catalogue-contact-repository https://github.com/ho-tex/intcalc
+catalogue-ctan /macros/latex/contrib/intcalc
+catalogue-license lppl1.3
+catalogue-topics arithmetic calculation
+catalogue-version 1.3
+
+name inter
+category Package
+revision 68966
+shortdesc The inter font face with support for LaTeX, XeLaTeX, and LuaLaTeX
+longdesc This package provides LaTeX, pdfLaTeX, XeLaTeX and LuaLaTeX
+longdesc support for the Inter Sans family of fonts (version 3.015),
+longdesc designed by Rasmus Andersson. Inter is a typeface specially
+longdesc designed for user interfaces with focus on high legibility of
+longdesc small-to-medium sized text on computer screens. The family
+longdesc features a tall x-height to aid in readability of mixed-case
+longdesc and lower-case text.
+execute addMap Inter.map
+containersize 13459132
+containerchecksum 3e2799fdcbb3648912d99ae0fee49b3e34098204e742ffd8bac5fda212f3e452606124e5503f99a52f7f647b54c31858256e7e1dcee4a566f3ca8e9d5aab5eb8
+doccontainersize 873816
+doccontainerchecksum 64260a91b781bc0ca36a73e1b44ffc34847b26b977a950cefa27649d7382e9cb9d34f70f982831912489d86e343d4abfc81ae0d91302d3276aaa5c8567c3ba42
+runfiles size=7925
+ fonts/enc/dvips/inter/a_3kvjgf.enc
+ fonts/enc/dvips/inter/a_3xzi2q.enc
+ fonts/enc/dvips/inter/a_4e7xpp.enc
+ fonts/enc/dvips/inter/a_5l7ypa.enc
+ fonts/enc/dvips/inter/a_6ftb5e.enc
+ fonts/enc/dvips/inter/a_6zlbe6.enc
+ fonts/enc/dvips/inter/a_cq4y6g.enc
+ fonts/enc/dvips/inter/a_djwlf6.enc
+ fonts/enc/dvips/inter/a_dvm45n.enc
+ fonts/enc/dvips/inter/a_eou476.enc
+ fonts/enc/dvips/inter/a_he2k6v.enc
+ fonts/enc/dvips/inter/a_i4h3jj.enc
+ fonts/enc/dvips/inter/a_iuq67p.enc
+ fonts/enc/dvips/inter/a_lmnsa6.enc
+ fonts/enc/dvips/inter/a_odfdzw.enc
+ fonts/enc/dvips/inter/a_pkfct2.enc
+ fonts/enc/dvips/inter/a_qkv7gm.enc
+ fonts/enc/dvips/inter/a_wjmlun.enc
+ fonts/enc/dvips/inter/a_xl7blu.enc
+ fonts/enc/dvips/inter/a_y3ib6m.enc
+ fonts/enc/dvips/inter/a_ykuvzx.enc
+ fonts/enc/dvips/inter/a_yrfexf.enc
+ fonts/map/dvips/inter/Inter.map
+ fonts/opentype/public/inter/Inter-Black.otf
+ fonts/opentype/public/inter/Inter-BlackItalic.otf
+ fonts/opentype/public/inter/Inter-Bold.otf
+ fonts/opentype/public/inter/Inter-BoldItalic.otf
+ fonts/opentype/public/inter/Inter-ExtraBold.otf
+ fonts/opentype/public/inter/Inter-ExtraBoldItalic.otf
+ fonts/opentype/public/inter/Inter-ExtraLight.otf
+ fonts/opentype/public/inter/Inter-ExtraLightItalic.otf
+ fonts/opentype/public/inter/Inter-Italic.otf
+ fonts/opentype/public/inter/Inter-Light.otf
+ fonts/opentype/public/inter/Inter-LightItalic.otf
+ fonts/opentype/public/inter/Inter-Medium.otf
+ fonts/opentype/public/inter/Inter-MediumItalic.otf
+ fonts/opentype/public/inter/Inter-Regular.otf
+ fonts/opentype/public/inter/Inter-SemiBold.otf
+ fonts/opentype/public/inter/Inter-SemiBoldItalic.otf
+ fonts/opentype/public/inter/Inter-Thin.otf
+ fonts/opentype/public/inter/Inter-ThinItalic.otf
+ fonts/tfm/public/inter/Inter-Black-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-Black-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-Black-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Black-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-Black-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Black-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-Black-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-Black-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Black-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-Black-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-BlackItalic-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-Bold-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-Bold-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-Bold-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-Bold-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-Bold-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-BoldItalic-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBold-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraBoldItalic-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLight-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-ExtraLightItalic-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-Italic-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-Italic-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-Italic-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-Italic-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-Italic-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-Light-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-Light-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Light-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-Light-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Light-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-Light-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-Light-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Light-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-Light-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-LightItalic-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-Medium-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-Medium-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-Medium-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-Medium-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-Medium-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-MediumItalic-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-Regular-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-Regular-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-Regular-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-Regular-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-Regular-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBold-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-SemiBoldItalic-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-Thin-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-Thin-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-Thin-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-Thin-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-Thin-tlf-ts1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-lgr.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-ly1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-oml.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-ot1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-t1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-lf-ts1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-sup-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-sup-lgr.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-sup-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-sup-ly1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-sup-ot1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-sup-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-sup-t1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-lgr.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-ly1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-oml--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-oml.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-ot1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-sc-lgr--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-sc-lgr.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-sc-ly1--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-sc-ly1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-sc-ot1--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-sc-ot1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-sc-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-sc-t1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-t1--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-t1.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-ts1--base.tfm
+ fonts/tfm/public/inter/Inter-ThinItalic-tlf-ts1.tfm
+ fonts/type1/public/inter/Inter-Black.pfb
+ fonts/type1/public/inter/Inter-BlackItalic.pfb
+ fonts/type1/public/inter/Inter-Bold.pfb
+ fonts/type1/public/inter/Inter-BoldItalic.pfb
+ fonts/type1/public/inter/Inter-ExtraBold.pfb
+ fonts/type1/public/inter/Inter-ExtraBoldItalic.pfb
+ fonts/type1/public/inter/Inter-ExtraLight.pfb
+ fonts/type1/public/inter/Inter-ExtraLightItalic.pfb
+ fonts/type1/public/inter/Inter-Italic.pfb
+ fonts/type1/public/inter/Inter-Light.pfb
+ fonts/type1/public/inter/Inter-LightItalic.pfb
+ fonts/type1/public/inter/Inter-Medium.pfb
+ fonts/type1/public/inter/Inter-MediumItalic.pfb
+ fonts/type1/public/inter/Inter-Regular.pfb
+ fonts/type1/public/inter/Inter-SemiBold.pfb
+ fonts/type1/public/inter/Inter-SemiBoldItalic.pfb
+ fonts/type1/public/inter/Inter-Thin.pfb
+ fonts/type1/public/inter/Inter-ThinItalic.pfb
+ fonts/vf/public/inter/Inter-Black-lf-lgr.vf
+ fonts/vf/public/inter/Inter-Black-lf-ly1.vf
+ fonts/vf/public/inter/Inter-Black-lf-oml.vf
+ fonts/vf/public/inter/Inter-Black-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-Black-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-Black-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-Black-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-Black-lf-t1.vf
+ fonts/vf/public/inter/Inter-Black-lf-ts1.vf
+ fonts/vf/public/inter/Inter-Black-sup-lgr.vf
+ fonts/vf/public/inter/Inter-Black-sup-ly1.vf
+ fonts/vf/public/inter/Inter-Black-sup-t1.vf
+ fonts/vf/public/inter/Inter-Black-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-Black-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-Black-tlf-oml.vf
+ fonts/vf/public/inter/Inter-Black-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-Black-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-Black-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-Black-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-Black-tlf-t1.vf
+ fonts/vf/public/inter/Inter-Black-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-BlackItalic-lf-lgr.vf
+ fonts/vf/public/inter/Inter-BlackItalic-lf-ly1.vf
+ fonts/vf/public/inter/Inter-BlackItalic-lf-oml.vf
+ fonts/vf/public/inter/Inter-BlackItalic-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-BlackItalic-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-BlackItalic-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-BlackItalic-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-BlackItalic-lf-t1.vf
+ fonts/vf/public/inter/Inter-BlackItalic-lf-ts1.vf
+ fonts/vf/public/inter/Inter-BlackItalic-sup-lgr.vf
+ fonts/vf/public/inter/Inter-BlackItalic-sup-ly1.vf
+ fonts/vf/public/inter/Inter-BlackItalic-sup-t1.vf
+ fonts/vf/public/inter/Inter-BlackItalic-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-BlackItalic-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-BlackItalic-tlf-oml.vf
+ fonts/vf/public/inter/Inter-BlackItalic-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-BlackItalic-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-BlackItalic-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-BlackItalic-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-BlackItalic-tlf-t1.vf
+ fonts/vf/public/inter/Inter-BlackItalic-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-Bold-lf-lgr.vf
+ fonts/vf/public/inter/Inter-Bold-lf-ly1.vf
+ fonts/vf/public/inter/Inter-Bold-lf-oml.vf
+ fonts/vf/public/inter/Inter-Bold-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-Bold-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-Bold-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-Bold-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-Bold-lf-t1.vf
+ fonts/vf/public/inter/Inter-Bold-lf-ts1.vf
+ fonts/vf/public/inter/Inter-Bold-sup-lgr.vf
+ fonts/vf/public/inter/Inter-Bold-sup-ly1.vf
+ fonts/vf/public/inter/Inter-Bold-sup-t1.vf
+ fonts/vf/public/inter/Inter-Bold-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-Bold-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-Bold-tlf-oml.vf
+ fonts/vf/public/inter/Inter-Bold-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-Bold-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-Bold-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-Bold-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-Bold-tlf-t1.vf
+ fonts/vf/public/inter/Inter-Bold-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-BoldItalic-lf-lgr.vf
+ fonts/vf/public/inter/Inter-BoldItalic-lf-ly1.vf
+ fonts/vf/public/inter/Inter-BoldItalic-lf-oml.vf
+ fonts/vf/public/inter/Inter-BoldItalic-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-BoldItalic-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-BoldItalic-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-BoldItalic-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-BoldItalic-lf-t1.vf
+ fonts/vf/public/inter/Inter-BoldItalic-lf-ts1.vf
+ fonts/vf/public/inter/Inter-BoldItalic-sup-lgr.vf
+ fonts/vf/public/inter/Inter-BoldItalic-sup-ly1.vf
+ fonts/vf/public/inter/Inter-BoldItalic-sup-t1.vf
+ fonts/vf/public/inter/Inter-BoldItalic-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-BoldItalic-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-BoldItalic-tlf-oml.vf
+ fonts/vf/public/inter/Inter-BoldItalic-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-BoldItalic-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-BoldItalic-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-BoldItalic-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-BoldItalic-tlf-t1.vf
+ fonts/vf/public/inter/Inter-BoldItalic-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-ExtraBold-lf-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraBold-lf-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraBold-lf-oml.vf
+ fonts/vf/public/inter/Inter-ExtraBold-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraBold-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraBold-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-ExtraBold-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-ExtraBold-lf-t1.vf
+ fonts/vf/public/inter/Inter-ExtraBold-lf-ts1.vf
+ fonts/vf/public/inter/Inter-ExtraBold-sup-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraBold-sup-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraBold-sup-t1.vf
+ fonts/vf/public/inter/Inter-ExtraBold-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraBold-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraBold-tlf-oml.vf
+ fonts/vf/public/inter/Inter-ExtraBold-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraBold-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraBold-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-ExtraBold-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-ExtraBold-tlf-t1.vf
+ fonts/vf/public/inter/Inter-ExtraBold-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-lf-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-lf-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-lf-oml.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-lf-t1.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-lf-ts1.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-sup-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-sup-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-sup-t1.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-tlf-oml.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-tlf-t1.vf
+ fonts/vf/public/inter/Inter-ExtraBoldItalic-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-ExtraLight-lf-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraLight-lf-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraLight-lf-oml.vf
+ fonts/vf/public/inter/Inter-ExtraLight-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraLight-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraLight-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-ExtraLight-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-ExtraLight-lf-t1.vf
+ fonts/vf/public/inter/Inter-ExtraLight-lf-ts1.vf
+ fonts/vf/public/inter/Inter-ExtraLight-sup-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraLight-sup-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraLight-sup-t1.vf
+ fonts/vf/public/inter/Inter-ExtraLight-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraLight-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraLight-tlf-oml.vf
+ fonts/vf/public/inter/Inter-ExtraLight-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraLight-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraLight-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-ExtraLight-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-ExtraLight-tlf-t1.vf
+ fonts/vf/public/inter/Inter-ExtraLight-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-lf-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-lf-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-lf-oml.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-lf-t1.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-lf-ts1.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-sup-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-sup-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-sup-t1.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-tlf-oml.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-tlf-t1.vf
+ fonts/vf/public/inter/Inter-ExtraLightItalic-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-Italic-lf-lgr.vf
+ fonts/vf/public/inter/Inter-Italic-lf-ly1.vf
+ fonts/vf/public/inter/Inter-Italic-lf-oml.vf
+ fonts/vf/public/inter/Inter-Italic-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-Italic-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-Italic-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-Italic-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-Italic-lf-t1.vf
+ fonts/vf/public/inter/Inter-Italic-lf-ts1.vf
+ fonts/vf/public/inter/Inter-Italic-sup-lgr.vf
+ fonts/vf/public/inter/Inter-Italic-sup-ly1.vf
+ fonts/vf/public/inter/Inter-Italic-sup-t1.vf
+ fonts/vf/public/inter/Inter-Italic-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-Italic-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-Italic-tlf-oml.vf
+ fonts/vf/public/inter/Inter-Italic-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-Italic-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-Italic-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-Italic-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-Italic-tlf-t1.vf
+ fonts/vf/public/inter/Inter-Italic-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-Light-lf-lgr.vf
+ fonts/vf/public/inter/Inter-Light-lf-ly1.vf
+ fonts/vf/public/inter/Inter-Light-lf-oml.vf
+ fonts/vf/public/inter/Inter-Light-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-Light-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-Light-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-Light-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-Light-lf-t1.vf
+ fonts/vf/public/inter/Inter-Light-lf-ts1.vf
+ fonts/vf/public/inter/Inter-Light-sup-lgr.vf
+ fonts/vf/public/inter/Inter-Light-sup-ly1.vf
+ fonts/vf/public/inter/Inter-Light-sup-t1.vf
+ fonts/vf/public/inter/Inter-Light-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-Light-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-Light-tlf-oml.vf
+ fonts/vf/public/inter/Inter-Light-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-Light-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-Light-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-Light-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-Light-tlf-t1.vf
+ fonts/vf/public/inter/Inter-Light-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-LightItalic-lf-lgr.vf
+ fonts/vf/public/inter/Inter-LightItalic-lf-ly1.vf
+ fonts/vf/public/inter/Inter-LightItalic-lf-oml.vf
+ fonts/vf/public/inter/Inter-LightItalic-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-LightItalic-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-LightItalic-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-LightItalic-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-LightItalic-lf-t1.vf
+ fonts/vf/public/inter/Inter-LightItalic-lf-ts1.vf
+ fonts/vf/public/inter/Inter-LightItalic-sup-lgr.vf
+ fonts/vf/public/inter/Inter-LightItalic-sup-ly1.vf
+ fonts/vf/public/inter/Inter-LightItalic-sup-t1.vf
+ fonts/vf/public/inter/Inter-LightItalic-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-LightItalic-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-LightItalic-tlf-oml.vf
+ fonts/vf/public/inter/Inter-LightItalic-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-LightItalic-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-LightItalic-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-LightItalic-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-LightItalic-tlf-t1.vf
+ fonts/vf/public/inter/Inter-LightItalic-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-Medium-lf-lgr.vf
+ fonts/vf/public/inter/Inter-Medium-lf-ly1.vf
+ fonts/vf/public/inter/Inter-Medium-lf-oml.vf
+ fonts/vf/public/inter/Inter-Medium-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-Medium-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-Medium-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-Medium-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-Medium-lf-t1.vf
+ fonts/vf/public/inter/Inter-Medium-lf-ts1.vf
+ fonts/vf/public/inter/Inter-Medium-sup-lgr.vf
+ fonts/vf/public/inter/Inter-Medium-sup-ly1.vf
+ fonts/vf/public/inter/Inter-Medium-sup-t1.vf
+ fonts/vf/public/inter/Inter-Medium-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-Medium-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-Medium-tlf-oml.vf
+ fonts/vf/public/inter/Inter-Medium-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-Medium-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-Medium-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-Medium-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-Medium-tlf-t1.vf
+ fonts/vf/public/inter/Inter-Medium-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-MediumItalic-lf-lgr.vf
+ fonts/vf/public/inter/Inter-MediumItalic-lf-ly1.vf
+ fonts/vf/public/inter/Inter-MediumItalic-lf-oml.vf
+ fonts/vf/public/inter/Inter-MediumItalic-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-MediumItalic-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-MediumItalic-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-MediumItalic-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-MediumItalic-lf-t1.vf
+ fonts/vf/public/inter/Inter-MediumItalic-lf-ts1.vf
+ fonts/vf/public/inter/Inter-MediumItalic-sup-lgr.vf
+ fonts/vf/public/inter/Inter-MediumItalic-sup-ly1.vf
+ fonts/vf/public/inter/Inter-MediumItalic-sup-t1.vf
+ fonts/vf/public/inter/Inter-MediumItalic-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-MediumItalic-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-MediumItalic-tlf-oml.vf
+ fonts/vf/public/inter/Inter-MediumItalic-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-MediumItalic-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-MediumItalic-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-MediumItalic-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-MediumItalic-tlf-t1.vf
+ fonts/vf/public/inter/Inter-MediumItalic-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-Regular-lf-lgr.vf
+ fonts/vf/public/inter/Inter-Regular-lf-ly1.vf
+ fonts/vf/public/inter/Inter-Regular-lf-oml.vf
+ fonts/vf/public/inter/Inter-Regular-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-Regular-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-Regular-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-Regular-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-Regular-lf-t1.vf
+ fonts/vf/public/inter/Inter-Regular-lf-ts1.vf
+ fonts/vf/public/inter/Inter-Regular-sup-lgr.vf
+ fonts/vf/public/inter/Inter-Regular-sup-ly1.vf
+ fonts/vf/public/inter/Inter-Regular-sup-t1.vf
+ fonts/vf/public/inter/Inter-Regular-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-Regular-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-Regular-tlf-oml.vf
+ fonts/vf/public/inter/Inter-Regular-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-Regular-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-Regular-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-Regular-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-Regular-tlf-t1.vf
+ fonts/vf/public/inter/Inter-Regular-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-SemiBold-lf-lgr.vf
+ fonts/vf/public/inter/Inter-SemiBold-lf-ly1.vf
+ fonts/vf/public/inter/Inter-SemiBold-lf-oml.vf
+ fonts/vf/public/inter/Inter-SemiBold-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-SemiBold-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-SemiBold-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-SemiBold-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-SemiBold-lf-t1.vf
+ fonts/vf/public/inter/Inter-SemiBold-lf-ts1.vf
+ fonts/vf/public/inter/Inter-SemiBold-sup-lgr.vf
+ fonts/vf/public/inter/Inter-SemiBold-sup-ly1.vf
+ fonts/vf/public/inter/Inter-SemiBold-sup-t1.vf
+ fonts/vf/public/inter/Inter-SemiBold-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-SemiBold-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-SemiBold-tlf-oml.vf
+ fonts/vf/public/inter/Inter-SemiBold-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-SemiBold-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-SemiBold-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-SemiBold-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-SemiBold-tlf-t1.vf
+ fonts/vf/public/inter/Inter-SemiBold-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-lf-lgr.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-lf-ly1.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-lf-oml.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-lf-t1.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-lf-ts1.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-sup-lgr.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-sup-ly1.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-sup-t1.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-tlf-oml.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-tlf-t1.vf
+ fonts/vf/public/inter/Inter-SemiBoldItalic-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-Thin-lf-lgr.vf
+ fonts/vf/public/inter/Inter-Thin-lf-ly1.vf
+ fonts/vf/public/inter/Inter-Thin-lf-oml.vf
+ fonts/vf/public/inter/Inter-Thin-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-Thin-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-Thin-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-Thin-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-Thin-lf-t1.vf
+ fonts/vf/public/inter/Inter-Thin-lf-ts1.vf
+ fonts/vf/public/inter/Inter-Thin-sup-lgr.vf
+ fonts/vf/public/inter/Inter-Thin-sup-ly1.vf
+ fonts/vf/public/inter/Inter-Thin-sup-t1.vf
+ fonts/vf/public/inter/Inter-Thin-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-Thin-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-Thin-tlf-oml.vf
+ fonts/vf/public/inter/Inter-Thin-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-Thin-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-Thin-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-Thin-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-Thin-tlf-t1.vf
+ fonts/vf/public/inter/Inter-Thin-tlf-ts1.vf
+ fonts/vf/public/inter/Inter-ThinItalic-lf-lgr.vf
+ fonts/vf/public/inter/Inter-ThinItalic-lf-ly1.vf
+ fonts/vf/public/inter/Inter-ThinItalic-lf-oml.vf
+ fonts/vf/public/inter/Inter-ThinItalic-lf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-ThinItalic-lf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-ThinItalic-lf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-ThinItalic-lf-sc-t1.vf
+ fonts/vf/public/inter/Inter-ThinItalic-lf-t1.vf
+ fonts/vf/public/inter/Inter-ThinItalic-lf-ts1.vf
+ fonts/vf/public/inter/Inter-ThinItalic-sup-lgr.vf
+ fonts/vf/public/inter/Inter-ThinItalic-sup-ly1.vf
+ fonts/vf/public/inter/Inter-ThinItalic-sup-t1.vf
+ fonts/vf/public/inter/Inter-ThinItalic-tlf-lgr.vf
+ fonts/vf/public/inter/Inter-ThinItalic-tlf-ly1.vf
+ fonts/vf/public/inter/Inter-ThinItalic-tlf-oml.vf
+ fonts/vf/public/inter/Inter-ThinItalic-tlf-sc-lgr.vf
+ fonts/vf/public/inter/Inter-ThinItalic-tlf-sc-ly1.vf
+ fonts/vf/public/inter/Inter-ThinItalic-tlf-sc-ot1.vf
+ fonts/vf/public/inter/Inter-ThinItalic-tlf-sc-t1.vf
+ fonts/vf/public/inter/Inter-ThinItalic-tlf-t1.vf
+ fonts/vf/public/inter/Inter-ThinItalic-tlf-ts1.vf
+ tex/latex/inter/LGRInter-LF.fd
+ tex/latex/inter/LGRInter-Sup.fd
+ tex/latex/inter/LGRInter-TLF.fd
+ tex/latex/inter/LY1Inter-LF.fd
+ tex/latex/inter/LY1Inter-Sup.fd
+ tex/latex/inter/LY1Inter-TLF.fd
+ tex/latex/inter/OMLInter-LF.fd
+ tex/latex/inter/OMLInter-TLF.fd
+ tex/latex/inter/OT1Inter-LF.fd
+ tex/latex/inter/OT1Inter-Sup.fd
+ tex/latex/inter/OT1Inter-TLF.fd
+ tex/latex/inter/T1Inter-LF.fd
+ tex/latex/inter/T1Inter-Sup.fd
+ tex/latex/inter/T1Inter-TLF.fd
+ tex/latex/inter/TS1Inter-LF.fd
+ tex/latex/inter/TS1Inter-TLF.fd
+ tex/latex/inter/inter.sty
+catalogue-contact-repository https://github.com/ccebinger/CTAN_Inter
+catalogue-ctan /fonts/inter
+catalogue-license ofl lppl
+catalogue-topics font font-body font-sans font-proportional font-otf font-type1 font-supp font-t1enc
+
+name kvdefinekeys
+category Package
+revision 53193
+shortdesc Define keys for use in the kvsetkeys package
+longdesc The package provides a macro \kv@define@key (analogous to
+longdesc keyval's \define@key, to define keys for use by kvsetkeys.
+containersize 2092
+containerchecksum 2a03840307805bd6fe30be9c108982bc472912c11c8cec25737ebc4042e48af8fe4f1a76124536874bea8c554f003a9c52b8a72d2f6900bc6872ffef8649c40e
+doccontainersize 296808
+doccontainerchecksum c540045ec1c8bd7fea3000dd0ebc8adac64da7ccc24b0becb9b9c32c9dda6e5e11a77b57bee667bd2ddbddf347bd8af069907e087d543898a92ebaedf3fa4b7c
+srccontainersize 5112
+srccontainerchecksum 0944a3f6f8e8cd8c189767944a74d5dbf09fcccd94cfdd2e67018f4a3542ce2ca4b8b7e3cb440345eb299584707962ed903f2fd8c832fad6cb850b29c7a99af6
+runfiles size=2
+ tex/generic/kvdefinekeys/kvdefinekeys.sty
+catalogue-contact-bugs https://github.com/ho-tex/kvdefinekeys/issues
+catalogue-contact-repository https://github.com/ho-tex/kvdefinekeys
+catalogue-ctan /macros/latex/contrib/kvdefinekeys
+catalogue-license lppl1.3c
+catalogue-topics keyval
+catalogue-version 1.6
+
+name kvoptions
+category Package
+revision 63622
+shortdesc Key value format for package options
+longdesc This package offers support for package authors who want to use
+longdesc options in key-value format for their package options.
+containersize 7180
+containerchecksum 8e4189334b66ed38279ec0deebb12769453db802b1538e8ef47598de08123006a5f65b4b86c144aba5c7ef21abb95c65196e314e4b80e9b513103354e4b29619
+doccontainersize 485344
+doccontainerchecksum 864fd685912d7bdac610c16508efdfadf82c9c2efb8ae3c9b5a0d16c1dffd91822a1389109b3de1ce63dd74bb1aff5efa534c134ee06f1e61df9c867aeea608d
+srccontainersize 21144
+srccontainerchecksum 38168cf3c486866ae79eac1708ed93f117187cd7404d852020cd9b70b3a518ca50d641db564d5d1d36b7e2a2c9beaab27e45abce93d01db4c37de7d9ad36bdf9
+runfiles size=10
+ tex/latex/kvoptions/kvoptions-patch.sty
+ tex/latex/kvoptions/kvoptions.sty
+catalogue-contact-bugs https://github.com/ho-tex/kvoptions/issues
+catalogue-contact-repository https://github.com/ho-tex/kvoptions
+catalogue-ctan /macros/latex/contrib/kvoptions
+catalogue-license lppl1.3
+catalogue-topics keyval
+catalogue-version 3.15
+
+name kvsetkeys
+category Package
+revision 64632
+shortdesc Key value parser with default handler support
+longdesc This package provides \kvsetkeys, a variant of package keyval's
+longdesc \setkeys. It allows the user to specify a handler that deals
+longdesc with unknown options. Active commas and equal signs may be used
+longdesc (e.g. see babel's shorthands) and only one level of curly
+longdesc braces are removed from the values.
+containersize 3568
+containerchecksum 8acc4b9069c3baadf9a9802546d636fe8268afb97416b47d79b0a0306d90104fbb86b8ec1b4492f3134357564bb81eba1ae0e84a38f5b94a556de45525777431
+doccontainersize 390776
+doccontainerchecksum 127d4a03b26c9adb92254b08f0aac6039e39ff961539e253bccfdc1ee3598dd5e10608b8c8909708c041f5134c549f9af550bd1371a1e7b90003f77ef53bbf33
+srccontainersize 10604
+srccontainerchecksum 696e78c295f0ac2a4d4c69e0d855925d46fee487da25ff238546033cae5e3b9042f66b924d1535ee41afc6142234fbef63ecf4df5b0c6c191b395109244e19e4
+runfiles size=4
+ tex/latex/kvsetkeys/kvsetkeys.sty
+catalogue-contact-bugs https://github.com/ho-tex/kvsetkeys/issues
+catalogue-contact-repository https://github.com/ho-tex/kvsetkeys
+catalogue-ctan /macros/latex/contrib/kvsetkeys
+catalogue-license lppl1.3
+catalogue-topics keyval
+catalogue-version 1.19
+
+name l3backend
+category Package
+revision 71991
+shortdesc LaTeX3 backend drivers
+longdesc This package forms parts of expl3, and contains the code used
+longdesc to interface with backends (drivers) across the expl3 codebase.
+longdesc The functions here are defined differently depending on the
+longdesc engine in use. As such, these are distributed separately from
+longdesc l3kernel to allow this code to be updated on an independent
+longdesc schedule.
+containersize 16256
+containerchecksum 57efe82dbb8ba599b3f68b256715a0fe530e7125a34ed18038015a60fa11b39d0d2b6820c104b77ad64ca50dea63486d73c2d8adb28338de59a80c0f2a390257
+doccontainersize 862344
+doccontainerchecksum 0f8693303f10d804a045595e9bcc0c3c19cb4a959e25843779ca3d9b248f7173bda259a2c0d95fcd34ed0cb2d5b4557b8064ce3d00364a34a713a93d9cde1035
+srccontainersize 33800
+srccontainerchecksum 4167135d9eb71ca97ed3eb270ba6185b4d745cc8b780db925976303a5b646896f1d3d54dc882e1d79cca5a20e1fc6df122bab2d68fc02c804718775242aa89f4
+runfiles size=51
+ dvips/l3backend/l3backend-dvips.pro
+ tex/latex/l3backend/l3backend-dvipdfmx.def
+ tex/latex/l3backend/l3backend-dvips.def
+ tex/latex/l3backend/l3backend-dvisvgm.def
+ tex/latex/l3backend/l3backend-luatex.def
+ tex/latex/l3backend/l3backend-luatex.lua
+ tex/latex/l3backend/l3backend-pdftex.def
+ tex/latex/l3backend/l3backend-xetex.def
+catalogue-contact-bugs https://github.com/latex3/latex3/issues
+catalogue-contact-home https://www.latex-project.org
+catalogue-contact-repository https://github.com/latex3/latex3/
+catalogue-ctan /macros/latex/required/l3backend
+catalogue-license lppl1.3c
+catalogue-topics latex3 expl3 macro-supp pre-release
+
+name l3kernel
+category Package
+revision 72755
+shortdesc LaTeX3 programming conventions
+longdesc The l3kernel bundle provides an implementation of the LaTeX3
+longdesc programmers' interface, as a set of packages that run under
+longdesc LaTeX2e. The interface provides the foundation on which the
+longdesc LaTeX3 kernel and other future code are built: it is an API for
+longdesc TeX programmers. The packages are set up so that the LaTeX3
+longdesc conventions can be used with regular LaTeX2e packages.
+depend l3backend
+containersize 180368
+containerchecksum 2cd7abbd0d807bd83fcaed6d20c4d68044c977635bf0f531b8420fb0e7f32d5c34f04fdfb5daec104455e575dcfc414cef11f5899877dad98ea320bc19c3b94c
+doccontainersize 12065392
+doccontainerchecksum 1c406a3cbbaffecab524d6bd0811df7f3aa103103a9113c32242f3685ddcf561fcbd39f1069eb45f55b972e5287c49cf82c61a53e7b94956df292e84a167229b
+srccontainersize 623060
+srccontainerchecksum e22c5d710c68bdecf2ecadca842da80fd291d3cb9fea1fd15e92546e16f3990d56495be13b7697e29d148e2b1a5f7a607f3f9e787cb71226645a72a6fa777dcf
+runfiles size=368
+ tex/latex/l3kernel/expl3-code.tex
+ tex/latex/l3kernel/expl3-generic.tex
+ tex/latex/l3kernel/expl3.ltx
+ tex/latex/l3kernel/expl3.lua
+ tex/latex/l3kernel/expl3.sty
+ tex/latex/l3kernel/l3debug.def
+ tex/latex/l3kernel/l3doc.cls
+ tex/latex/l3kernel/l3docstrip.tex
+ tex/latex/l3kernel/l3str-enc-iso88591.def
+ tex/latex/l3kernel/l3str-enc-iso885910.def
+ tex/latex/l3kernel/l3str-enc-iso885911.def
+ tex/latex/l3kernel/l3str-enc-iso885913.def
+ tex/latex/l3kernel/l3str-enc-iso885914.def
+ tex/latex/l3kernel/l3str-enc-iso885915.def
+ tex/latex/l3kernel/l3str-enc-iso885916.def
+ tex/latex/l3kernel/l3str-enc-iso88592.def
+ tex/latex/l3kernel/l3str-enc-iso88593.def
+ tex/latex/l3kernel/l3str-enc-iso88594.def
+ tex/latex/l3kernel/l3str-enc-iso88595.def
+ tex/latex/l3kernel/l3str-enc-iso88596.def
+ tex/latex/l3kernel/l3str-enc-iso88597.def
+ tex/latex/l3kernel/l3str-enc-iso88598.def
+ tex/latex/l3kernel/l3str-enc-iso88599.def
+catalogue-also l3backend l3packages l3experimental
+catalogue-contact-bugs https://github.com/latex3/latex3/issues
+catalogue-contact-home https://www.latex-project.org
+catalogue-contact-repository https://github.com/latex3/latex3
+catalogue-ctan /macros/latex/required/l3kernel
+catalogue-license lppl1.3c
+catalogue-topics format latex3 pre-release
+
+name l3packages
+category Package
+revision 72128
+shortdesc High-level LaTeX3 concepts
+longdesc This collection deals with higher-level ideas such as the
+longdesc Designer Interface, as part of LaTeX3 developments. The
+longdesc packages here have over time migrated into the LaTeX kernel:
+longdesc the material here is retained to support older files. The
+longdesc appropriate LaTeX kernel releases incorporating the ideas from
+longdesc the packages here are l3keys2e 2022-06-01 xfp 2022-06-01 xparse
+longdesc 2020-10-01 xtemplate 2024-06-01
+depend l3kernel
+containersize 20424
+containerchecksum f0d9762be695c12a675d3f2bcf1a211b933c634ae9ca6fc458063d6ead5e33d1b9136ea715ff04993f1f20b549cca3b12414647e3b3628e2135ba52a90b643d9
+doccontainersize 1458196
+doccontainerchecksum 55c40fa419ed6595ffbe6679f9320cfece7176e7baa56293e14ae5c30cd7ee0bd7d57d6123551cbbae384f84b4e769b395f402aa1922624196a1f2a790d22750
+srccontainersize 27412
+srccontainerchecksum 2b210c23be60534c90a1e243baf569b1b9efd5dd3724bccc1e9f84e371db556251e28104b794626720b5173e0cd77ab8db514b42847fc89aea2b98115902f66a
+runfiles size=64
+ tex/latex/l3packages/l3keys2e/l3keys2e.sty
+ tex/latex/l3packages/xfp/xfp.sty
+ tex/latex/l3packages/xparse/xparse-2018-04-12.sty
+ tex/latex/l3packages/xparse/xparse-2020-10-01.sty
+ tex/latex/l3packages/xparse/xparse-generic.tex
+ tex/latex/l3packages/xparse/xparse.ltx
+ tex/latex/l3packages/xparse/xparse.sty
+ tex/latex/l3packages/xtemplate/xtemplate-2023-10-10.sty
+ tex/latex/l3packages/xtemplate/xtemplate.sty
+catalogue-also l3kernel l3experimental
+catalogue-contact-bugs https://github.com/latex3/latex3/issues
+catalogue-contact-home https://www.latex-project.org
+catalogue-ctan /macros/latex/contrib/l3packages
+catalogue-license lppl1.3c
+catalogue-topics macro-supp latex3 pre-release
+
+name ltxcmds
+category Package
+revision 69032
+shortdesc Some LaTeX kernel commands for general use
+longdesc This package exports some utility macros from the LaTeX kernel
+longdesc into a separate namespace and also makes them available for
+longdesc other formats such as plain TeX.
+containersize 4120
+containerchecksum 9d9a9835f4547200b160b42c07e918fb8b2cdf9eba91c30647c6fb1c74cb6f9ba60ab40bed63514ecbf334d527148b31fb1ec90af60075d19e28d10d675ded68
+doccontainersize 405944
+doccontainerchecksum 21be07f4f98531621f90b7ed23c06fa4b39fafa12a83c45784b83b5f9728817657b5c2ac2c09e4988ce0c6df0918a7c93d29d7ab89159cca5ce5fc9e0eb017dd
+srccontainersize 12948
+srccontainerchecksum becad978f8b2303a44057f165cdc6d22ddec03e58a26a0d6350bfbaf6d681ba43b105b65492c5be2382ee1e4f814129f86abc2ce376d2d42ddb0fdbdd2671d01
+runfiles size=5
+ tex/generic/ltxcmds/ltxcmds.sty
+catalogue-contact-bugs https://github.com/ho-tex/ltxcmds/issues
+catalogue-contact-repository https://github.com/ho-tex/ltxcmds
+catalogue-ctan /macros/generic/ltxcmds
+catalogue-license lppl1.3c
+catalogue-topics macro-supp macro-gen
+catalogue-version 1.26
+
+name needspace
+category Package
+revision 29601
+shortdesc Insert pagebreak if not enough space
+longdesc Provides commands to disable pagebreaking within a given
+longdesc vertical space. If there is not enough space between the
+longdesc command and the bottom of the page, a new page will be started.
+containersize 828
+containerchecksum 663b2ffe30b1d9a588183916ccb0e3fecf3098d3e67f2a40fc49e1db1e5c1a892bfb56eb177bccd923415dfe51d4a225e2017be3b2f3f7185071836cb2e04391
+doccontainersize 158552
+doccontainerchecksum 3af05a6704a8d3c9539cab0871f9f9c8b7a241549c1b3127dfce2a0eaf77b87d54fdafff4b2749eb4614ad9aba45bd2e3d695a92243ea30472e62f7945eff004
+srccontainersize 2120
+srccontainerchecksum a629e9b798ab772feed1e66b773fbc141b0b2c2cb6c336acf61e8e3884246da1b36f90260fd47121e53e552f6569528e81ee788b6d1779c9e87eb54517a2d787
+runfiles size=1
+ tex/latex/needspace/needspace.sty
+catalogue-ctan /macros/latex/contrib/needspace
+catalogue-license lppl
+catalogue-topics layout
+catalogue-version 1.3d
+
+name paracol
+category Package
+revision 72651
+shortdesc Multiple columns with texts "in parallel"
+longdesc The package provides yet another multi-column typesetting
+longdesc mechanism by which you produce multi-column (e.g., bilingual)
+longdesc document switching and sychronizing each corresponding part in
+longdesc "parallel".
+containersize 19428
+containerchecksum 9af1832a5af05e44ae72f1a5f4a3d9b82d54544a935ab402ea305f63382d6545ef14a8677114ac001b8b8b6ff69a5165cc9647dc1a56af1673e8639fdd432b43
+doccontainersize 2466756
+doccontainerchecksum cc1d4681ececf6e5ba6dd386180cea2cdc5d14866e3cd03bb085e3e7e013fe0875126fb369b3757b940859ddc6cea3760ef6a88075ee89e1218501418bf2e06b
+srccontainersize 211664
+srccontainerchecksum d2219958d964c781e732083ee4f2e0f5ab398d2f29d9e09fd6c4d9e2a97fad8e784e59dec85bb4d53f96276a6d6dd27429eadc2c017b9b6c1bd2206b8306de15
+runfiles size=53
+ tex/latex/paracol/paracol-2018-12-31.sty
+ tex/latex/paracol/paracol.sty
+catalogue-also parallel parcolumns
+catalogue-contact-repository https://codeberg.org/mgkurtz/paracol
+catalogue-ctan /macros/latex/contrib/paracol
+catalogue-license lppl
+catalogue-topics parallel linguistic
+catalogue-version 1.36
+
+name pdfescape
+category Package
+revision 53082
+shortdesc Implements pdfTeX's escape features using TeX or e-TeX
+longdesc This package implements pdfTeX's escape features
+longdesc (\pdfescapehex, \pdfunescapehex, \pdfescapename,
+longdesc \pdfescapestring) using TeX or e-TeX.
+containersize 4264
+containerchecksum ca908d58a9a0c0094fcd9bad550bf493a0dbea9e90702534a7418f9a5f506f5cedd42663f154bd227349e4e57e223b6360871bdc995eaea221c07cccaa780327
+doccontainersize 342644
+doccontainerchecksum d95aa97463b20c178a04f9f2cb71011985eb5242ec620adb9911bb5f1103f71e9fb0feca5704a9339b9490a71ed67c8c038efcf6cf43e16fcd20ba2eaeff8161
+srccontainersize 8308
+srccontainerchecksum b6edb668b4803c91288b0f149e2700213ecab7725310d7d4bf499cf557590cd4356d9c79a6bfaf17a50ce85f4951a1e996ccf6725ea6da000f0c316f5a0466d4
+runfiles size=5
+ tex/generic/pdfescape/pdfescape.sty
+catalogue-contact-bugs https://github.com/ho-tex/pdfescape/issues
+catalogue-contact-repository https://github.com/ho-tex/pdfescape
+catalogue-ctan /macros/latex/contrib/pdfescape
+catalogue-license lppl1.3
+catalogue-topics macro-supp
+catalogue-version 1.15
+
+name pdftexcmds
+category Package
+revision 55777
+shortdesc LuaTeX support for pdfTeX utility functions
+longdesc LuaTeX provides most of the commands of pdfTeX 1.40. However, a
+longdesc number of utility functions are not available. This package
+longdesc tries to fill the gap and implements some of the missing
+longdesc primitives using Lua.
+containersize 6316
+containerchecksum 91054b61b76382813d80e873d908cc07f8571b7651f49a3dc3e87063507af43bf31107c34187b703b0c4462eafe0cd605159803c72cbf2821cf6ab3afb78fc6d
+doccontainersize 379844
+doccontainerchecksum a16db56366e80b1694b78919a245336c37690ea9a1305a606a3bfa85a73c854e92d1cd8b9ddb0bdfdea82f1ef684d06d8b4649e4111c39f24f321dbcb01aa036
+srccontainersize 14052
+srccontainerchecksum f3e62a5f9029f71c652105b137048cef4f5562dd0848bb7a94d251e2af579c394322a70f40aadbed3ac56312005d59124ef3fd5a2436127a72c430d344ecede1
+runfiles size=8
+ tex/generic/pdftexcmds/pdftexcmds.lua
+ tex/generic/pdftexcmds/pdftexcmds.sty
+catalogue-contact-bugs https://github.com/ho-tex/pdftexcmds/issues
+catalogue-contact-repository https://github.com/ho-tex/pdftexcmds
+catalogue-ctan /macros/generic/pdftexcmds
+catalogue-license lppl1.3c
+catalogue-topics macro-supp macro-gen
+catalogue-version 0.33
+
+name pdfx
+category Package
+revision 71681
+shortdesc PDF/X and PDF/A support for pdfTeX, LuaTeX and XeTeX
+longdesc The package helps LaTeX users to create PDF/X, PFD/A and other
+longdesc standards-compliant PDF documents with pdfTeX, LuaTeX and
+longdesc XeTeX.
+containersize 90796
+containerchecksum 3a186a9dc416d6e3aad2ed915aded0b98fe227d6829d1381fdbea3244429258b043441fed67eccf677ab4dd59d15378f9bddc9544847c2770d1e8544ce38227f
+doccontainersize 5162724
+doccontainerchecksum ce5931ec7cd9d836a23cacff24c13b7cf8332174735ac20644e83ac963dfd586434f154e17acfb66d9b5733827a4ffbbc9b51060fe026c3468f82d321b83e191
+srccontainersize 67200
+srccontainerchecksum 363eb39fbaff70796a98c679bccec71ef005286b54d86be4f17878550f2a7e4449bf19f808c0e04755818fd73f10014057f104730112957a31e9d000efa52d81
+runfiles size=217
+ tex/latex/pdfx/8bit.def
+ tex/latex/pdfx/AdobeColorProfiles.tex
+ tex/latex/pdfx/AdobeExternalProfiles.tex
+ tex/latex/pdfx/CallasColorProfiles.tex
+ tex/latex/pdfx/armglyphs.dfu
+ tex/latex/pdfx/glyphtounicode-cmr.tex
+ tex/latex/pdfx/glyphtounicode-ntx.tex
+ tex/latex/pdfx/l8u-penc.def
+ tex/latex/pdfx/l8uarb-penc.def
+ tex/latex/pdfx/l8uarm-penc.def
+ tex/latex/pdfx/l8ucyr-penc.def
+ tex/latex/pdfx/l8udev-penc.def
+ tex/latex/pdfx/l8ugrk-penc.def
+ tex/latex/pdfx/l8uheb-penc.def
+ tex/latex/pdfx/l8ulat-penc.def
+ tex/latex/pdfx/l8umath-penc.def
+ tex/latex/pdfx/pdfa.xmp
+ tex/latex/pdfx/pdfe.xmp
+ tex/latex/pdfx/pdfvt.xmp
+ tex/latex/pdfx/pdfx.sty
+ tex/latex/pdfx/pdfx.xmp
+ tex/latex/pdfx/text89.def
+catalogue-ctan /macros/latex/contrib/pdfx
+catalogue-license lppl
+catalogue-topics pdf-feat
+catalogue-version 1.6.5f
+
+name pgf
+category Package
+revision 71527
+shortdesc Create PostScript and PDF graphics in TeX
+longdesc PGF is a macro package for creating graphics. It is platform-
+longdesc and format-independent and works together with the most
+longdesc important TeX backend drivers, including pdfTeX and dvips. It
+longdesc comes with a user-friendly syntax layer called TikZ. Its usage
+longdesc is similar to pstricks and the standard picture environment.
+longdesc PGF works with plain (pdf-)TeX, (pdf-)LaTeX, and ConTeXt.
+longdesc Unlike pstricks, it can produce either PostScript or PDF
+longdesc output.
+depend atveryend
+depend fp
+depend graphics
+depend pdftexcmds
+depend xcolor
+containersize 717460
+containerchecksum 8daa537d912577aa45d8f9a97fe9a22bf42c2e427fe7cf7588cc130dfb1d3710e524210e3b01aa8f1200e6a286a78e2be7340035f17c51167678778bcfbdf25b
+doccontainersize 9995120
+doccontainerchecksum ae726a4ae7c83993cc3bbf3f10f3481d4293dbfa309b5f7b130d480621a72cb1d8bc0e9dc0d49c02f3c5d5f259e6d85ab3f9905369ebe10f879940e31823c9fb
+runfiles size=1523
+ tex/context/third/pgf/basiclayer/t-pgf.tex
+ tex/context/third/pgf/basiclayer/t-pgfbim.tex
+ tex/context/third/pgf/basiclayer/t-pgfbla.tex
+ tex/context/third/pgf/basiclayer/t-pgfbma.tex
+ tex/context/third/pgf/basiclayer/t-pgfbpl.tex
+ tex/context/third/pgf/basiclayer/t-pgfbpt.tex
+ tex/context/third/pgf/basiclayer/t-pgfbsh.tex
+ tex/context/third/pgf/basiclayer/t-pgfbsn.tex
+ tex/context/third/pgf/basiclayer/t-pgfcor.tex
+ tex/context/third/pgf/frontendlayer/t-tikz.tex
+ tex/context/third/pgf/math/t-pgfmat.tex
+ tex/context/third/pgf/systemlayer/t-pgfsys.tex
+ tex/context/third/pgf/utilities/t-pgfcal.tex
+ tex/context/third/pgf/utilities/t-pgffor.tex
+ tex/context/third/pgf/utilities/t-pgfkey.tex
+ tex/context/third/pgf/utilities/t-pgfmod.tex
+ tex/context/third/pgf/utilities/t-pgfrcs.tex
+ tex/generic/pgf/basiclayer/pgfcore.code.tex
+ tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+ tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+ tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+ tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+ tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+ tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+ tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+ tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+ tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+ tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+ tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+ tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+ tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+ tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+ tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+ tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+ tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/circuits/tikzlibrarycircuits.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/circuits/tikzlibrarycircuits.ee.IEC.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/circuits/tikzlibrarycircuits.ee.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/circuits/tikzlibrarycircuits.logic.CDH.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/circuits/tikzlibrarycircuits.logic.IEC.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/circuits/tikzlibrarycircuits.logic.US.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/circuits/tikzlibrarycircuits.logic.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/datavisualization/tikzlibrarydatavisualization.3d.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/datavisualization/tikzlibrarydatavisualization.barcharts.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/datavisualization/tikzlibrarydatavisualization.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/datavisualization/tikzlibrarydatavisualization.formats.functions.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/datavisualization/tikzlibrarydatavisualization.polar.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/datavisualization/tikzlibrarydatavisualization.sparklines.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.standard.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary3d.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryangles.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryanimations.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryautomata.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybabel.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybending.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalendar.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarychains.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.footprints.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.fractals.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.shapes.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.text.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryer.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfixedpointarithmetic.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfolding.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryintersections.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarylindenmayersystems.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymath.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymindmap.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.meta.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryperspective.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypetri.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplothandlers.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryrdf.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryscopes.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadings.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.gates.logic.IEC.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.gates.logic.US.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarysnakes.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryspy.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarysvg.path.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarythrough.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytrees.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryturtle.code.tex
+ tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryviews.code.tex
+ tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+ tex/generic/pgf/graphdrawing/lua/LUA_CODING_STYLE
+ tex/generic/pgf/graphdrawing/lua/pgf.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/bindings.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/bindings/Binding.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/bindings/BindingToPGF.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/circular.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/circular/Tantau2012.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/circular/doc.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/circular/library.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control/Anchoring.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control/ComponentAlign.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control/ComponentDirection.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control/ComponentDistance.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control/ComponentOrder.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control/Components.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control/Distances.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control/FineTune.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control/LayoutPipeline.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control/NodeAnchors.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control/Orientation.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control/Sublayouts.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control/doc.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/control/library.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/deprecated/Cluster.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/deprecated/Edge.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/deprecated/Graph.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/deprecated/Iterators.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/deprecated/Node.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/deprecated/Vector.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/FMMMLayout.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/FastMultipoleEmbedder.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/GEMLayout.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/MultilevelLayout.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/SpringEmbedderFR.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/SpringEmbedderFRExact.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/SpringEmbedderKK.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/multilevelmixer/BarycenterPlacer.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/multilevelmixer/CirclePlacer.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/multilevelmixer/EdgeCoverMerger.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/multilevelmixer/IndependentSetMerger.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/multilevelmixer/LocalBiconnectedMerger.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/multilevelmixer/MatchingMerger.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/multilevelmixer/MedianPlacer.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/multilevelmixer/RandomMerger.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/multilevelmixer/RandomPlacer.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/multilevelmixer/SolarMerger.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/multilevelmixer/SolarPlacer.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/energybased/multilevelmixer/ZeroPlacer.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/layered.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/layered/BarycenterHeuristic.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/layered/CoffmanGrahamRanking.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/layered/DfsAcyclicSubgraph.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/layered/FastHierarchyLayout.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/layered/FastSimpleHierarchyLayout.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/layered/GreedyCycleRemoval.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/layered/GreedyInsertHeuristic.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/layered/LongestPathRanking.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/layered/MedianHeuristic.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/layered/OptimalRanking.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/layered/SiftingHeuristic.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/layered/SplitHeuristic.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/layered/SugiyamaLayout.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/misclayout.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/misclayout/BalloonLayout.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/misclayout/CircularLayout.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/module/AcyclicSubgraphModule.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/module/HierarchyLayoutModule.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/module/InitialPlacer.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/module/MultilevelBuilder.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/module/RankingModule.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/module/TwoLayerCrossMin.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/planarity.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/doc/ogdf/planarity/PlanarizationLayout.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/examples.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/examples/ASCIIDisplayer.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/examples/BindingToASCII.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/examples/SimpleDemo.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/examples/SimpleEdgeDemo.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/examples/SimpleHuffman.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/examples/example_graph_for_ascii_displayer.txt
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/examples/library.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/GraphAnimationCoordination.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/GreedyTemporalCycleRemoval.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/Skambath2016.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/Supergraph.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/SupergraphVertexSplitOptimization.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/TimeSpec.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/doc.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/layered.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/experimental/evolving/library.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/CoarseGraph.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/ControlCoarsening.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/ControlDeclare.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/ControlElectric.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/ControlIteration.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/ControlSprings.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/ControlStart.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/QuadTree.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/SpringElectricalHu2006.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/SpringElectricalLayouts.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/SpringElectricalWalshaw2000.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/SpringHu2006.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/SpringLayouts.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/algorithms/FruchtermanReingold.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/algorithms/HuSpringElectricalFW.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/algorithms/SimpleSpring.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/algorithms/SocialGravityCloseness.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/algorithms/SocialGravityDegree.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/base/CoarseGraphFW.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/base/ForceController.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/base/ForceTemplate.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/base/InitialTemplate.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/base/PathLengthsFW.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/base/Preprocessing.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/doc.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/forcetypes/ForceAbsoluteValue.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/forcetypes/ForceCanvasDistance.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/forcetypes/ForceCanvasPosition.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/forcetypes/ForceGraphDistance.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/forcetypes/ForcePullToGrid.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/forcetypes/ForcePullToPoint.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/initialpositioning/CircularInitialPositioning.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/initialpositioning/GridInitialPositioning.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/initialpositioning/RandomInitialPositioning.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/jedi/library.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/force/library.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/interface.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/interface/InterfaceCore.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/interface/InterfaceToAlgorithms.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/interface/InterfaceToC.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/interface/InterfaceToDisplay.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/interface/Scope.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/CrossingMinimizationGansnerKNV1993.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/CycleRemovalBergerS1990a.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/CycleRemovalBergerS1990b.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/CycleRemovalEadesLS1993.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/CycleRemovalGansnerKNV1993.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/EdgeRoutingGansnerKNV1993.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/NetworkSimplex.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/NodePositioningGansnerKNV1993.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/NodeRankingGansnerKNV1993.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/NodeRankingMinimumHeight.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/Ranking.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/Sugiyama.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/crossing_minimization.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/cycle_removal.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/edge_routing.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/library.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/node_positioning.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/layered/node_ranking.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/lib.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/lib/Bezier.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/lib/DepthFirstSearch.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/lib/Direct.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/lib/Event.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/lib/LookupTable.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/lib/PathLengths.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/lib/PriorityQueue.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/lib/Simplifiers.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/lib/Stack.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/lib/Storage.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/lib/Transform.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/model.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/model/Arc.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/model/Collection.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/model/Coordinate.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/model/Digraph.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/model/Edge.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/model/Hyperedge.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/model/Path.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/model/Path_arced.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/model/Vertex.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/model/library.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/ogdf.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/ogdf/library.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/pedigrees.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/pedigrees/Koerner2015.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/pedigrees/library.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/phylogenetics.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/phylogenetics/AuthorDefinedPhylogeny.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/phylogenetics/BalancedMinimumEvolution.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/phylogenetics/BalancedNearestNeighbourInterchange.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/phylogenetics/DistanceMatrix.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/phylogenetics/Maeusle2012.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/phylogenetics/PhylogeneticTree.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/phylogenetics/SokalMichener1958.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/phylogenetics/library.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/planar.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/BoyerMyrvold2004.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/Embedding.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/LinkedList.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/List.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/PDP.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/PlanarLayout.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/ShiftMethod.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/library.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/planar/parameters.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/routing.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/routing/Hints.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/routing/NecklaceRouting.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/routing/library.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/tools/make_gd_wrap.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/trees.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/trees/ChildSpec.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/trees/ReingoldTilford1981.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/trees/SpanningTreeComputation.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/trees/doc.lua
+ tex/generic/pgf/graphdrawing/lua/pgf/gd/trees/library.lua
+ tex/generic/pgf/graphdrawing/tex/experimental/tikzlibrarygraphdrawing.evolving.code.tex
+ tex/generic/pgf/graphdrawing/tex/pgflibrarygraphdrawing.circular.code.tex
+ tex/generic/pgf/graphdrawing/tex/pgflibrarygraphdrawing.code.tex
+ tex/generic/pgf/graphdrawing/tex/pgflibrarygraphdrawing.examples.code.tex
+ tex/generic/pgf/graphdrawing/tex/pgflibrarygraphdrawing.force.code.tex
+ tex/generic/pgf/graphdrawing/tex/pgflibrarygraphdrawing.layered.code.tex
+ tex/generic/pgf/graphdrawing/tex/pgflibrarygraphdrawing.trees.code.tex
+ tex/generic/pgf/graphdrawing/tex/tikzlibrarygraphdrawing.code.tex
+ tex/generic/pgf/libraries/datavisualization/pgflibrarydatavisualization.barcharts.code.tex
+ tex/generic/pgf/libraries/datavisualization/pgflibrarydatavisualization.formats.functions.code.tex
+ tex/generic/pgf/libraries/datavisualization/pgflibrarydatavisualization.polar.code.tex
+ tex/generic/pgf/libraries/decorations/pgflibrarydecorations.footprints.code.tex
+ tex/generic/pgf/libraries/decorations/pgflibrarydecorations.fractals.code.tex
+ tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex
+ tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex
+ tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex
+ tex/generic/pgf/libraries/decorations/pgflibrarydecorations.shapes.code.tex
+ tex/generic/pgf/libraries/decorations/pgflibrarydecorations.text.code.tex
+ tex/generic/pgf/libraries/luamath/pgf/luamath/functions.lua
+ tex/generic/pgf/libraries/luamath/pgf/luamath/parser.lua
+ tex/generic/pgf/libraries/luamath/pgflibraryluamath.code.tex
+ tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+ tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+ tex/generic/pgf/libraries/pgflibraryarrows.spaced.code.tex
+ tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex
+ tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+ tex/generic/pgf/libraries/pgflibraryfixedpointarithmetic.code.tex
+ tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+ tex/generic/pgf/libraries/pgflibraryintersections.code.tex
+ tex/generic/pgf/libraries/pgflibrarylindenmayersystems.code.tex
+ tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+ tex/generic/pgf/libraries/pgflibrarypatterns.meta.code.tex
+ tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+ tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+ tex/generic/pgf/libraries/pgflibraryprofiler.code.tex
+ tex/generic/pgf/libraries/pgflibraryshadings.code.tex
+ tex/generic/pgf/libraries/pgflibrarysnakes.code.tex
+ tex/generic/pgf/libraries/pgflibrarysvg.path.code.tex
+ tex/generic/pgf/libraries/pgflibrarytimelines.code.tex
+ tex/generic/pgf/libraries/shapes/circuits/pgflibraryshapes.gates.ee.IEC.code.tex
+ tex/generic/pgf/libraries/shapes/circuits/pgflibraryshapes.gates.ee.code.tex
+ tex/generic/pgf/libraries/shapes/circuits/pgflibraryshapes.gates.logic.IEC.code.tex
+ tex/generic/pgf/libraries/shapes/circuits/pgflibraryshapes.gates.logic.US.code.tex
+ tex/generic/pgf/libraries/shapes/circuits/pgflibraryshapes.gates.logic.code.tex
+ tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
+ tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex
+ tex/generic/pgf/libraries/shapes/pgflibraryshapes.code.tex
+ tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+ tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+ tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+ tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+ tex/generic/pgf/lua/pgf/manual.lua
+ tex/generic/pgf/lua/pgf/manual/DocumentParser.lua
+ tex/generic/pgf/math/pgfint.code.tex
+ tex/generic/pgf/math/pgfmath.code.tex
+ tex/generic/pgf/math/pgfmathcalc.code.tex
+ tex/generic/pgf/math/pgfmathfloat.code.tex
+ tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+ tex/generic/pgf/math/pgfmathfunctions.basic.code.tex
+ tex/generic/pgf/math/pgfmathfunctions.code.tex
+ tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex
+ tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex
+ tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+ tex/generic/pgf/math/pgfmathfunctions.random.code.tex
+ tex/generic/pgf/math/pgfmathfunctions.round.code.tex
+ tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex
+ tex/generic/pgf/math/pgfmathode.code.tex
+ tex/generic/pgf/math/pgfmathparser.code.tex
+ tex/generic/pgf/math/pgfmathutil.code.tex
+ tex/generic/pgf/modules/pgfmoduleanimations.code.tex
+ tex/generic/pgf/modules/pgfmodulebending.code.tex
+ tex/generic/pgf/modules/pgfmoduledatavisualization.code.tex
+ tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+ tex/generic/pgf/modules/pgfmodulematrix.code.tex
+ tex/generic/pgf/modules/pgfmodulenonlineartransformations.code.tex
+ tex/generic/pgf/modules/pgfmoduleoo.code.tex
+ tex/generic/pgf/modules/pgfmoduleparser.code.tex
+ tex/generic/pgf/modules/pgfmoduleplot.code.tex
+ tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+ tex/generic/pgf/modules/pgfmodulesnakes.code.tex
+ tex/generic/pgf/modules/pgfmodulesorting.code.tex
+ tex/generic/pgf/pgf.revision.tex
+ tex/generic/pgf/systemlayer/pgf.cfg
+ tex/generic/pgf/systemlayer/pgfsys-common-pdf-via-dvi.def
+ tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+ tex/generic/pgf/systemlayer/pgfsys-common-postscript.def
+ tex/generic/pgf/systemlayer/pgfsys-common-svg.def
+ tex/generic/pgf/systemlayer/pgfsys-dvi.def
+ tex/generic/pgf/systemlayer/pgfsys-dvipdfm.def
+ tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
+ tex/generic/pgf/systemlayer/pgfsys-dvips.def
+ tex/generic/pgf/systemlayer/pgfsys-dvisvgm.def
+ tex/generic/pgf/systemlayer/pgfsys-dvisvgm4ht.def
+ tex/generic/pgf/systemlayer/pgfsys-luatex.def
+ tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+ tex/generic/pgf/systemlayer/pgfsys-tex4ht.def
+ tex/generic/pgf/systemlayer/pgfsys-textures.def
+ tex/generic/pgf/systemlayer/pgfsys-vtex.def
+ tex/generic/pgf/systemlayer/pgfsys-xetex.def
+ tex/generic/pgf/systemlayer/pgfsys.code.tex
+ tex/generic/pgf/systemlayer/pgfsysanimations.code.tex
+ tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+ tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+ tex/generic/pgf/utilities/pgfcalendar.code.tex
+ tex/generic/pgf/utilities/pgfexternal.tex
+ tex/generic/pgf/utilities/pgfexternalwithdepth.tex
+ tex/generic/pgf/utilities/pgffor.code.tex
+ tex/generic/pgf/utilities/pgfkeys.code.tex
+ tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+ tex/generic/pgf/utilities/pgfrcs.code.tex
+ tex/generic/pgf/utilities/pgfutil-common-lists.tex
+ tex/generic/pgf/utilities/pgfutil-common.tex
+ tex/generic/pgf/utilities/pgfutil-context.def
+ tex/generic/pgf/utilities/pgfutil-latex.def
+ tex/generic/pgf/utilities/pgfutil-plain.def
+ tex/latex/pgf/basiclayer/pgf.sty
+ tex/latex/pgf/basiclayer/pgfbaseimage.sty
+ tex/latex/pgf/basiclayer/pgfbaselayers.sty
+ tex/latex/pgf/basiclayer/pgfbasematrix.sty
+ tex/latex/pgf/basiclayer/pgfbasepatterns.sty
+ tex/latex/pgf/basiclayer/pgfbaseplot.sty
+ tex/latex/pgf/basiclayer/pgfbaseshapes.sty
+ tex/latex/pgf/basiclayer/pgfbasesnakes.sty
+ tex/latex/pgf/basiclayer/pgfcore.sty
+ tex/latex/pgf/compatibility/pgfarrows.sty
+ tex/latex/pgf/compatibility/pgfautomata.sty
+ tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+ tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+ tex/latex/pgf/compatibility/pgfheaps.sty
+ tex/latex/pgf/compatibility/pgflibraryarrows.sty
+ tex/latex/pgf/compatibility/pgflibraryautomata.sty
+ tex/latex/pgf/compatibility/pgflibraryplothandlers.sty
+ tex/latex/pgf/compatibility/pgflibraryplotmarks.sty
+ tex/latex/pgf/compatibility/pgflibraryshapes.sty
+ tex/latex/pgf/compatibility/pgflibrarysnakes.sty
+ tex/latex/pgf/compatibility/pgflibrarytikzbackgrounds.sty
+ tex/latex/pgf/compatibility/pgflibrarytikztrees.sty
+ tex/latex/pgf/compatibility/pgfnodes.sty
+ tex/latex/pgf/compatibility/pgfshade.sty
+ tex/latex/pgf/doc/pgfmanual-en-macros.tex
+ tex/latex/pgf/doc/pgfmanual.code.tex
+ tex/latex/pgf/doc/pgfmanual.pdflinks.code.tex
+ tex/latex/pgf/doc/pgfmanual.prettyprinter.code.tex
+ tex/latex/pgf/doc/pgfmanual.sty
+ tex/latex/pgf/frontendlayer/libraries/tikzlibraryexternal.code.tex
+ tex/latex/pgf/frontendlayer/pgfpict2e.sty
+ tex/latex/pgf/frontendlayer/tikz.sty
+ tex/latex/pgf/math/pgfmath.sty
+ tex/latex/pgf/systemlayer/pgfsys.sty
+ tex/latex/pgf/utilities/pgfcalendar.sty
+ tex/latex/pgf/utilities/pgffor.sty
+ tex/latex/pgf/utilities/pgfkeys.sty
+ tex/latex/pgf/utilities/pgfpages.sty
+ tex/latex/pgf/utilities/pgfparser.sty
+ tex/latex/pgf/utilities/pgfrcs.sty
+ tex/latex/pgf/utilities/tikzexternal.sty
+ tex/latex/pgf/utilities/xxcolor.sty
+ tex/plain/pgf/basiclayer/pgf.tex
+ tex/plain/pgf/basiclayer/pgfbaseimage.tex
+ tex/plain/pgf/basiclayer/pgfbaselayers.tex
+ tex/plain/pgf/basiclayer/pgfbasematrix.tex
+ tex/plain/pgf/basiclayer/pgfbasepatterns.tex
+ tex/plain/pgf/basiclayer/pgfbaseplot.tex
+ tex/plain/pgf/basiclayer/pgfbaseshapes.tex
+ tex/plain/pgf/basiclayer/pgfbasesnakes.tex
+ tex/plain/pgf/basiclayer/pgfcore.tex
+ tex/plain/pgf/frontendlayer/tikz.tex
+ tex/plain/pgf/math/pgfmath.tex
+ tex/plain/pgf/systemlayer/pgfsys.tex
+ tex/plain/pgf/utilities/pgfcalendar.tex
+ tex/plain/pgf/utilities/pgffor.tex
+ tex/plain/pgf/utilities/pgfkeys.tex
+ tex/plain/pgf/utilities/pgfrcs.tex
+catalogue-alias tikz
+catalogue-contact-bugs https://github.com/pgf-tikz/pgf/issues
+catalogue-contact-repository https://github.com/pgf-tikz/pgf
+catalogue-contact-support https://tug.org/mailman/listinfo/pgf-tikz
+catalogue-ctan /graphics/pgf/base
+catalogue-license lppl1.3c gpl2 fdl
+catalogue-topics graphics pgf-tikz graphics-in-tex
+catalogue-version 3.1.10
+
+name ragged2e
+category Package
+revision 67441
+shortdesc Alternative versions of "ragged"-type commands
+longdesc The package defines new commands \Centering, \RaggedLeft, and
+longdesc \RaggedRight and new environments Center, FlushLeft, and
+longdesc FlushRight, which set ragged text and are easily configurable
+longdesc to allow hyphenation (the corresponding commands in LaTeX, all
+longdesc of whose names are lower-case, prevent hyphenation altogether).
+containersize 3048
+containerchecksum 363d952daecbd0c4d57e7d2aa5bd28e32bd04efd1b26f5ab65c4874fc65948fb4258eb430560bb8d294406cf314778047b0027a45c21cf99f77119519878e368
+doccontainersize 727552
+doccontainerchecksum be65fa8afee57fb8044ad9ec3ae1ee05ebaf0d8b40388f9876de7c25f6bc6b3a78221b393442e1c3bfe69450eb3c98b276b569540ea8a154a5297560f8a972c4
+srccontainersize 12024
+srccontainerchecksum 56482d060b48c8433214b352efc1b2d6499aeb97a689fffd7e2ae5175f92033714aeb61250f79eb847ed3dc63db8e873ae8efab2aa8dd6d8824902a4c00517e2
+runfiles size=3
+ tex/latex/ragged2e/ragged2e.sty
+catalogue-also everysel
+catalogue-contact-bugs https://gitlab.com/TeXhackse/ragged2e/-/issues
+catalogue-contact-repository https://gitlab.com/TeXhackse/ragged2e
+catalogue-ctan /macros/latex/contrib/ragged2e
+catalogue-license lppl1.3c
+catalogue-topics layout parshape
+catalogue-version 3.6
+
+name refcount
+category Package
+revision 53164
+shortdesc Counter operations with label references
+longdesc Provides commands \setcounterref and \addtocounterref which use
+longdesc the section (or whatever) number from the reference as the
+longdesc value to put into the counter, as in: ...\label{sec:foo} ...
+longdesc \setcounterref{foonum}{sec:foo} Commands \setcounterpageref and
+longdesc \addtocounterpageref do the corresponding thing with the page
+longdesc reference of the label. No .ins file is distributed; process
+longdesc the .dtx with plain TeX to create one.
+containersize 3040
+containerchecksum da914e64de5b70e124d9eb62148f5650c9445d2fdb94272ce622478b9aa50a4c7625be9c2152fffe9ff9fd87ee19319a0bc31ec5fd82839a479faec687de4af4
+doccontainersize 325408
+doccontainerchecksum 5324828978e3c8c14e9a28b86cbf87de175b9908f460ce6090bf19944557cfe82b112c6543d2878b54f4a16b1a9f3f3ffc66eddf1234c04b8852dbfa3ebaf27e
+srccontainersize 7464
+srccontainerchecksum 26c03363bd65be818d05792fc1c7e3a2e7e747a49382562eeebaefac35d5b4143b86bd46fce97fd4aa0f162ce7a1399e200f2593b3920091159bcfa08f0f8781
+runfiles size=3
+ tex/latex/refcount/refcount.sty
+catalogue-contact-bugs https://github.com/ho-tex/refcount/issues
+catalogue-contact-repository https://github.com/ho-tex/refcount
+catalogue-ctan /macros/latex/contrib/refcount
+catalogue-license lppl1.3
+catalogue-topics label-ref
+catalogue-version 3.6
+
+name rerunfilecheck
+category Package
+revision 63869
+shortdesc Checksum based rerun checks on auxiliary files
+longdesc The package provides additional rerun warnings if some
+longdesc auxiliary files have changed. It is based on MD5 checksum
+longdesc provided by pdfTeX, LuaTeX, XeTeX.
+depend atveryend
+depend uniquecounter
+containersize 3140
+containerchecksum 464daf4ee4f443f4ff329e28b928df94e83e83696e3e5604de7b51beb61c25a0ce50dc00b35d2cc8d0cabb32d10bc28c3c06069f5dd7eafd9fdb2d44a3adf313
+doccontainersize 331404
+doccontainerchecksum 7c570d38c989aaeb7db5271501c5384ba8b8601396f629d7ffee32baaf1c289592bb5d69d2cb2784cfb2008fdc047098d43dc20803e4b90eac59848c15dd0cb7
+srccontainersize 7216
+srccontainerchecksum 2d987c01bc0f67708080d4578f308444ed3220a37ee11ef1a95c2a9bfa0ab49a46ab46d291153f0c748935f473124d70212a821233b22f1e606be6183e4afe81
+runfiles size=3
+ tex/latex/rerunfilecheck/rerunfilecheck.sty
+catalogue-contact-bugs https://github.com/ho-tex/rerunfilecheck/issues
+catalogue-contact-repository https://github.com/ho-tex/rerunfilecheck
+catalogue-ctan /macros/latex/contrib/rerunfilecheck
+catalogue-license lppl1.3c
+catalogue-topics compilation
+catalogue-version 1.10
+
+name stringenc
+category Package
+revision 52982
+shortdesc Converting a string between different encodings
+longdesc This package provides \StringEncodingConvert for converting a
+longdesc string between different encodings. Both LaTeX and plain-TeX
+longdesc are supported.
+containersize 23376
+containerchecksum a776ddb2378bea0880d7c17e1a87db5f66645c5856243e49de1c56bc427213098afbca34773a44ad955a0014b969c59454d3a0c0ec371d213481668f5f784ca4
+doccontainersize 664768
+doccontainerchecksum a4f182559d37e45ca8b6c50656d2d520e3f0bf1ab63dc6477cd6e3abe6cbb5c4b89d779c380997b167019aae6fb12ae68d5fe37ea0c08945e3383f5d9905bf31
+srccontainersize 30628
+srccontainerchecksum 3febbaa990eb691af640df745f36e289a7f2bfe6f52259d6693c6c9991d719e79edbd14b35c1eba5a9033b203531fceb4164303bd6a3dbab7238b814bdb5eda6
+runfiles size=108
+ tex/generic/stringenc/se-ascii-print.def
+ tex/generic/stringenc/se-ascii.def
+ tex/generic/stringenc/se-clean7bit.def
+ tex/generic/stringenc/se-cp1250.def
+ tex/generic/stringenc/se-cp1251.def
+ tex/generic/stringenc/se-cp1252.def
+ tex/generic/stringenc/se-cp1257.def
+ tex/generic/stringenc/se-cp437.def
+ tex/generic/stringenc/se-cp850.def
+ tex/generic/stringenc/se-cp852.def
+ tex/generic/stringenc/se-cp855.def
+ tex/generic/stringenc/se-cp858.def
+ tex/generic/stringenc/se-cp865.def
+ tex/generic/stringenc/se-cp866.def
+ tex/generic/stringenc/se-dec-mcs.def
+ tex/generic/stringenc/se-iso-8859-1.def
+ tex/generic/stringenc/se-iso-8859-10.def
+ tex/generic/stringenc/se-iso-8859-11.def
+ tex/generic/stringenc/se-iso-8859-13.def
+ tex/generic/stringenc/se-iso-8859-14.def
+ tex/generic/stringenc/se-iso-8859-15.def
+ tex/generic/stringenc/se-iso-8859-16.def
+ tex/generic/stringenc/se-iso-8859-2.def
+ tex/generic/stringenc/se-iso-8859-3.def
+ tex/generic/stringenc/se-iso-8859-4.def
+ tex/generic/stringenc/se-iso-8859-5.def
+ tex/generic/stringenc/se-iso-8859-6.def
+ tex/generic/stringenc/se-iso-8859-7.def
+ tex/generic/stringenc/se-iso-8859-8.def
+ tex/generic/stringenc/se-iso-8859-9.def
+ tex/generic/stringenc/se-koi8-r.def
+ tex/generic/stringenc/se-mac-centeuro.def
+ tex/generic/stringenc/se-mac-cyrillic.def
+ tex/generic/stringenc/se-mac-roman.def
+ tex/generic/stringenc/se-nextstep.def
+ tex/generic/stringenc/se-pdfdoc.def
+ tex/generic/stringenc/se-utf16le.def
+ tex/generic/stringenc/se-utf32be.def
+ tex/generic/stringenc/se-utf32le.def
+ tex/generic/stringenc/se-utf8.def
+ tex/generic/stringenc/stringenc.sty
+catalogue-contact-bugs https://github.com/ho-tex/stringenc/issues
+catalogue-contact-repository https://github.com/ho-tex/stringenc
+catalogue-ctan /macros/latex/contrib/stringenc
+catalogue-license lppl1.3
+catalogue-topics enc-juggle
+catalogue-version 1.12
+
+name tcolorbox
+category Package
+revision 72624
+shortdesc Coloured boxes, for LaTeX examples and theorems, etc
+longdesc This package provides an environment for coloured and framed
+longdesc text boxes with a heading line. Optionally, such a box may be
+longdesc split in an upper and a lower part; thus the package may be
+longdesc used for the setting of LaTeX examples where one part of the
+longdesc box displays the source code and the other part shows the
+longdesc output. Another common use case is the setting of theorems. The
+longdesc package supports saving and reuse of source code and text
+longdesc parts. The package depends on the pgf, verbatim, environ, and
+longdesc etoolbox packages.
+depend environ
+depend pgf
+depend tools
+containersize 234320
+containerchecksum 70d2d64ec44df645739ac5c83f4379c49dc9c4713b1c7bbfae8cb13ceeb97712a00ae40ba2964783f62e2ba7c53b8c839802e0e777660908ddeef168afe39558
+doccontainersize 4758832
+doccontainerchecksum e5ad889124fe134900fb057b85a9d8e3f9612a78dcab2d56602d74fb5242b2445327315cb29d194c5155b6cb6443e3686e54a4d59faa9a77717f5b46f6c736ed
+runfiles size=150
+ tex/latex/tcolorbox/blueshade.png
+ tex/latex/tcolorbox/crinklepaper.png
+ tex/latex/tcolorbox/goldshade.png
+ tex/latex/tcolorbox/pink_marble.png
+ tex/latex/tcolorbox/tcbbreakable.code.tex
+ tex/latex/tcolorbox/tcbdocumentation.code.tex
+ tex/latex/tcolorbox/tcbexternal.code.tex
+ tex/latex/tcolorbox/tcbfitting.code.tex
+ tex/latex/tcolorbox/tcbhooks.code.tex
+ tex/latex/tcolorbox/tcblistings.code.tex
+ tex/latex/tcolorbox/tcblistingscore.code.tex
+ tex/latex/tcolorbox/tcblistingsutf8.code.tex
+ tex/latex/tcolorbox/tcbmagazine.code.tex
+ tex/latex/tcolorbox/tcbminted.code.tex
+ tex/latex/tcolorbox/tcbposter.code.tex
+ tex/latex/tcolorbox/tcbprocessing.code.tex
+ tex/latex/tcolorbox/tcbraster.code.tex
+ tex/latex/tcolorbox/tcbskins.code.tex
+ tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+ tex/latex/tcolorbox/tcbtheorems.code.tex
+ tex/latex/tcolorbox/tcbvignette.code.tex
+ tex/latex/tcolorbox/tcbxparse.code.tex
+ tex/latex/tcolorbox/tcolorbox.sty
+catalogue-contact-bugs https://github.com/T-F-S/tcolorbox/issues
+catalogue-ctan /macros/latex/contrib/tcolorbox
+catalogue-license lppl1.3
+catalogue-topics boxing box-breaking colour verbatim listing macro-demo
+catalogue-version 6.4.1
+
+name tikzfill
+category Package
+revision 67847
+shortdesc TikZ libraries for filling with images and patterns
+longdesc This is a collection of TikZ libraries which add further
+longdesc options to fill TikZ paths with images and patterns. The
+longdesc libraries comprise fillings with images from files and from
+longdesc TikZ pictures. Also, patterns of hexagons and of rhombi are
+longdesc provided.
+containersize 4652
+containerchecksum 4864d0859490cd07e123e1160a35fb7817c3ffcc1f409a8c61285823f655357473e0dc7ab92434b5b552cbfca3e88d9181e57cf944d2422467b466cbdcd743a0
+doccontainersize 626980
+doccontainerchecksum f08d351db50d0ac3d6362c223e30b97b9a734a8b19fc426d5592a17692380667172ee6793064b8c2787ee9e1eaa1a38b70a821f53a2e0dc26316ba81f0549aa2
+runfiles size=13
+ tex/latex/tikzfill/tikzfill-common.sty
+ tex/latex/tikzfill/tikzfill.hexagon.sty
+ tex/latex/tikzfill/tikzfill.image.sty
+ tex/latex/tikzfill/tikzfill.rhombus.sty
+ tex/latex/tikzfill/tikzfill.sty
+ tex/latex/tikzfill/tikzlibraryfill.hexagon.code.tex
+ tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+ tex/latex/tikzfill/tikzlibraryfill.rhombus.code.tex
+catalogue-contact-bugs https://github.com/T-F-S/tikzfill/issues
+catalogue-contact-home https://github.com/T-F-S/tikzfill
+catalogue-contact-repository https://github.com/T-F-S/tikzfill.git
+catalogue-ctan /graphics/pgf/contrib/tikzfill
+catalogue-license lppl1.3
+catalogue-topics pgf-tikz expl3
+catalogue-version 1.0.1
+
+name tools
+category Package
+revision 72739
+catalogue latex-tools
+shortdesc The LaTeX standard tools bundle
+longdesc A collection of (variously) simple tools provided as part of
+longdesc the LaTeX required tools distribution, comprising the packages:
+longdesc afterpage, array, bm, calc, dcolumn, delarray, enumerate,
+longdesc fileerr, fontsmpl, ftnright, hhline, indentfirst, layout,
+longdesc longtable, multicol, rawfonts, shellesc, showkeys, somedefs,
+longdesc tabularx, theorem, trace, varioref, verbatim, xr, and xspace.
+containersize 46316
+containerchecksum a6f9ea3cdb3639fb8d99ca452717ac3cd141a118461fa91a7b7389c5befb25d5a1d8cb7d91b792f3c5cf2f9e68a678a11e9f5a5983decca8c77916ba1ea3f27f
+doccontainersize 6348432
+doccontainerchecksum c462f5a95f1310d7bf51d35ed2d1b7c92a11ca283d1ca292fdb90b74cbb7c545768615582d269342f82fe0bf620d03ff4ca61bd17599861071b21cf41424da38
+srccontainersize 244296
+srccontainerchecksum 0452e38de1e293344cb9306a2659af542cef4dd3b773ed5e8893ccc4eb707713f5835a7ef43d8ea955f7f466d0486d11adde3075bfe77c478a9bc3f68d8e84ef
+runfiles size=129
+ tex/latex/tools/.tex
+ tex/latex/tools/afterpage.sty
+ tex/latex/tools/array-2016-10-06.sty
+ tex/latex/tools/array-2020-02-10.sty
+ tex/latex/tools/array-2023-11-01.sty
+ tex/latex/tools/array.sty
+ tex/latex/tools/bm.sty
+ tex/latex/tools/calc.sty
+ tex/latex/tools/dcolumn.sty
+ tex/latex/tools/delarray.sty
+ tex/latex/tools/e.tex
+ tex/latex/tools/enumerate.sty
+ tex/latex/tools/fontsmpl.sty
+ tex/latex/tools/fontsmpl.tex
+ tex/latex/tools/ftnright.sty
+ tex/latex/tools/h.tex
+ tex/latex/tools/hhline.sty
+ tex/latex/tools/indentfirst.sty
+ tex/latex/tools/l3sys-query.sty
+ tex/latex/tools/layout.sty
+ tex/latex/tools/longtable-2020-01-07.sty
+ tex/latex/tools/longtable.sty
+ tex/latex/tools/multicol-2017-04-11.sty
+ tex/latex/tools/multicol-2019-10-01.sty
+ tex/latex/tools/multicol.sty
+ tex/latex/tools/q.tex
+ tex/latex/tools/r.tex
+ tex/latex/tools/rawfonts.sty
+ tex/latex/tools/s.tex
+ tex/latex/tools/shellesc.sty
+ tex/latex/tools/showkeys-2014-10-28.sty
+ tex/latex/tools/showkeys.sty
+ tex/latex/tools/somedefs.sty
+ tex/latex/tools/tabularx.sty
+ tex/latex/tools/thb.sty
+ tex/latex/tools/thc.sty
+ tex/latex/tools/thcb.sty
+ tex/latex/tools/theorem.sty
+ tex/latex/tools/thm.sty
+ tex/latex/tools/thmb.sty
+ tex/latex/tools/thp.sty
+ tex/latex/tools/trace.sty
+ tex/latex/tools/varioref-2016-02-16.sty
+ tex/latex/tools/varioref.sty
+ tex/latex/tools/verbatim.sty
+ tex/latex/tools/verbtest.tex
+ tex/latex/tools/x.tex
+ tex/latex/tools/xr-2023-07-04.sty
+ tex/latex/tools/xr.sty
+ tex/latex/tools/xspace.sty
+catalogue-ctan /macros/latex/required/tools
+catalogue-license lppl1.3c
+catalogue-topics collection
+
+name trimspaces
+category Package
+revision 15878
+shortdesc Trim spaces around an argument or within a macro
+longdesc A very short package that allows you to expandably remove
+longdesc spaces around a token list (commands are provided to remove
+longdesc spaces before, spaces after, or both); or to remove surrounding
+longdesc spaces within a macro definition, or to define space-stripped
+longdesc macros.
+containersize 936
+containerchecksum 09bfe50d1b14502311aea7a20df80e70c1907b1c8443aba9453aa0a3eb76cbd34728734b81df63bd5895a4a5a55ddfe6d0feedf7d5d28d6b5922a374bc550c9e
+doccontainersize 148416
+doccontainerchecksum 8e26064de0c14d6caa1d6cf625cbd2d598102056136dfa20d0a7ffb178c26829db0206d87893937b63f83171744a29bea3567e16e2a7a0d454734a0b72837277
+srccontainersize 2488
+srccontainerchecksum a34429fb9b8514d25ac523f0e3bfdc880b84951ff228ede3016e2d29c001b7f8058755870fc3c63e6041ef4768290177dabc6d520157082fb077497017065b65
+runfiles size=1
+ tex/latex/trimspaces/trimspaces.sty
+catalogue-ctan /macros/latex/contrib/trimspaces
+catalogue-license lppl
+catalogue-topics macro-supp
+catalogue-version 1.1
+
+name uniquecounter
+category Package
+revision 53162
+shortdesc Provides unlimited unique counter
+longdesc This package provides a kind of counter that provides unique
+longdesc number values. Several counters can be created with different
+longdesc names. The numeric values are not limited.
+containersize 2272
+containerchecksum 9769fcfd787f210e0653c971872aaad6e0ef1e5a066e392e9d599f8fc11ab9f6587d21db1100b643d09d4850cfbfbbc1d32f01fd1e86aedab8c92da4f5a7d614
+doccontainersize 291268
+doccontainerchecksum 4dc74aabd9288ae881c4513886ff917e1e8bf08446d3b34c946bded6a6fa71ea7b6786bf432fec2661cd1db1af6b5875ab329708cc3c443499b83b0325645d0f
+srccontainersize 5320
+srccontainerchecksum caac3c3445b2b9301d46ca94744eb600cc45b79f6946065f036f412d2d1b41716864d61e0cfb9e9d32ab8dbf870e5f4e302c96b388d680badb13c52821f7722e
+runfiles size=2
+ tex/generic/uniquecounter/uniquecounter.sty
+catalogue-contact-bugs https://github.com/ho-tex/uniquecounter/issues
+catalogue-contact-repository https://github.com/ho-tex/uniquecounter
+catalogue-ctan /macros/latex/contrib/uniquecounter
+catalogue-license lppl1.3
+catalogue-topics numbers
+catalogue-version 1.4
+
+name url
+category Package
+revision 32528
+shortdesc Verbatim with URL-sensitive line breaks
+longdesc The command \url is a form of verbatim command that allows
+longdesc linebreaks at certain characters or combinations of characters,
+longdesc accepts reconfiguration, and can usually be used in the
+longdesc argument to another command. (The \urldef command provides
+longdesc robust commands that serve in cases when \url doesn't work in
+longdesc an argument.) The command is intended for email addresses,
+longdesc hypertext links, directories/paths, etc., which normally have
+longdesc no spaces, so by default the package ignores spaces in its
+longdesc argument. However, a package option "allows spaces", which is
+longdesc useful for operating systems where spaces are a common part of
+longdesc file names.
+containersize 5528
+containerchecksum 164fb94cb128e997031bfdf8c602892d78813694f39f4b95bfead8a5b7e3cd9a0d9596dbe697e012bdf84b89c2551c2f2f1c7f99d4543e357edfaf2076b9cfba
+doccontainersize 266856
+doccontainerchecksum 65596e0ce813233491959ef161be8570450c6c71c787b3253d0bce503558e63902137a6d337ad1e7cd2499feacbba4a93b7b75559750d05d7898ff2527f1240c
+runfiles size=4
+ tex/latex/url/url.sty
+catalogue-also path
+catalogue-ctan /macros/latex/contrib/url
+catalogue-license lppl
+catalogue-topics verbatim
+catalogue-version 3.4
+
+name xcolor
+category Package
+revision 72484
+shortdesc Driver-independent color extensions for LaTeX and pdfLaTeX
+longdesc The package starts from the basic facilities of the color
+longdesc package, and provides easy driver-independent access to several
+longdesc kinds of color tints, shades, tones, and mixes of arbitrary
+longdesc colors. It allows a user to select a document-wide target color
+longdesc model and offers complete tools for conversion between eight
+longdesc color models. Additionally, there is a command for alternating
+longdesc row colors plus repeated non-aligned material (like horizontal
+longdesc lines) in tables. Colors can be mixed like
+longdesc \color{red!30!green!40!blue}.
+containersize 18284
+containerchecksum 255a76dd0879aa6f5a8be38f84ba307cfa7595c7e2b4b9d92cc85867139a17951f230c10dc130dc1c10c612436adaa47a9222556e8dad126e91ef5b8b12d558a
+doccontainersize 935032
+doccontainerchecksum 010f65991bbb53c03a7539735e7d7b58d978cfd84cbbf2be9e4f07e13c9b52c158560e5936f18fd940395262c2d886a427c272435de5302cdb306cca21feb1f3
+srccontainersize 77232
+srccontainerchecksum e61e4dba30fdcaf8df7759e4f8a718f6c256419b05729b2009007de0dee4af2ff023277997b2693f2edf0d7a4872849a00897325385afbfc364c69966d993ca0
+runfiles size=34
+ dvips/xcolor/xcolor.pro
+ tex/latex/xcolor/svgnam.def
+ tex/latex/xcolor/x11nam.def
+ tex/latex/xcolor/xcolor-2022-06-12.sty
+ tex/latex/xcolor/xcolor.sty
+catalogue-contact-bugs https://github.com/latex3/xcolor/issues
+catalogue-contact-home https://github.com/latex3/xcolor
+catalogue-ctan /macros/latex/contrib/xcolor
+catalogue-license lppl1.3c
+catalogue-topics colour
+catalogue-version 3.02
+
+name xmpincl
+category Package
+revision 60593
+shortdesc Include eXtensible Metadata Platform data in pdfLaTeX
+longdesc The XMP (eXtensible Metadata platform) is a framework to add
+longdesc metadata to digital material to enhance the workflow in
+longdesc publication. The essence is that the metadata is stored in an
+longdesc XML file, and this XML stream is then embedded in the file to
+longdesc which it applies. How you create this XML file is up to you,
+longdesc but the author started investigating this because he wanted to
+longdesc embed licensing information in the files he created. The
+longdesc license the author chose is one of the Creative Commons
+longdesc licenses, and their web-site offers this information in a valid
+longdesc XML-file, suitable for direct inclusion.
+containersize 1792
+containerchecksum 49777de1160b2ef53d845ba08fb0af29eb5f06c6fc534da4856bd0f02dbed2dbaa73ac24c45b1e787ea44d08199b7d1c462dc21a972cd1815fcbf65a08388f26
+doccontainersize 98416
+doccontainerchecksum b8750478957f6b33163ef546d7be0c0ba4e5906d64a72cdf3edda33c663bcf7400eaeebe3119a175f21093a1b00bd2626df0156c8ebdfb9cdd076bc8d7953ac7
+srccontainersize 6628
+srccontainerchecksum 48d8805d763169bd3024227edac213a5e57d207e63895492cc6f0a25ef38b82fe9d8fee76ea5309344bd397e4c5b70f8b72892d4054307bf758fb81cc8af3bd9
+runfiles size=1
+ tex/latex/xmpincl/xmpincl.sty
+catalogue-ctan /macros/latex/contrib/xmpincl
+catalogue-license gpl
+catalogue-topics metadata pdf-feat
+catalogue-version 2.4
+
+name zapfding
+category Package
+revision 61719
+catalogue urw-base35
+shortdesc URW 'Base 35' font pack for LaTeX
+longdesc A set of fonts for use as "drop-in" replacements for Adobe's
+longdesc basic set, comprising: Century Schoolbook (substituting for
+longdesc Adobe's New Century Schoolbook); Dingbats (substituting for
+longdesc Adobe's Zapf Dingbats); Nimbus Mono L (substituting for Abobe's
+longdesc Courier); Nimbus Roman No9 L (substituting for Adobe's Times);
+longdesc Nimbus Sans L (substituting for Adobe's Helvetica); Standard
+longdesc Symbols L (substituting for Adobe's Symbol); URW Bookman; URW
+longdesc Chancery L Medium Italic (substituting for Adobe's Zapf
+longdesc Chancery); URW Gothic L Book (substituting for Adobe's Avant
+longdesc Garde); and URW Palladio L (substituting for Adobe's Palatino).
+execute addMap uzd.map
+containersize 46944
+containerchecksum 3e0503c2d4e30c8d727caa1d9438d4c6b12c3a15729eae65d5c4a8dd9ab0d0c8eee2f63138e9d267f4ae98ef7607388888f7acd78e189a5c322bda22827166fe
+runfiles size=24
+ dvips/zapfding/config.uzd
+ fonts/afm/adobe/zapfding/pzdr.afm
+ fonts/afm/urw/zapfding/uzdr.afm
+ fonts/map/dvips/zapfding/uzd.map
+ fonts/tfm/adobe/zapfding/pzdr.tfm
+ fonts/tfm/urw35vf/zapfding/uzdr.tfm
+ fonts/type1/urw/zapfding/uzdr.pfb
+ fonts/type1/urw/zapfding/uzdr.pfm
+ tex/latex/zapfding/uuzd.fd
+catalogue-also tex-gyre
+catalogue-ctan /fonts/urw/base35
+catalogue-license gpl
+catalogue-topics font font-type1 font-collection
+

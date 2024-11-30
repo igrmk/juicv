@@ -1,0 +1,40 @@
+name pdfx
+category Package
+revision 71681
+shortdesc PDF/X and PDF/A support for pdfTeX, LuaTeX and XeTeX
+longdesc The package helps LaTeX users to create PDF/X, PFD/A and other
+longdesc standards-compliant PDF documents with pdfTeX, LuaTeX and
+longdesc XeTeX.
+containersize 90796
+containerchecksum 3a186a9dc416d6e3aad2ed915aded0b98fe227d6829d1381fdbea3244429258b043441fed67eccf677ab4dd59d15378f9bddc9544847c2770d1e8544ce38227f
+doccontainersize 5162724
+doccontainerchecksum ce5931ec7cd9d836a23cacff24c13b7cf8332174735ac20644e83ac963dfd586434f154e17acfb66d9b5733827a4ffbbc9b51060fe026c3468f82d321b83e191
+srccontainersize 67200
+srccontainerchecksum 363eb39fbaff70796a98c679bccec71ef005286b54d86be4f17878550f2a7e4449bf19f808c0e04755818fd73f10014057f104730112957a31e9d000efa52d81
+runfiles size=217
+ tex/latex/pdfx/8bit.def
+ tex/latex/pdfx/AdobeColorProfiles.tex
+ tex/latex/pdfx/AdobeExternalProfiles.tex
+ tex/latex/pdfx/CallasColorProfiles.tex
+ tex/latex/pdfx/armglyphs.dfu
+ tex/latex/pdfx/glyphtounicode-cmr.tex
+ tex/latex/pdfx/glyphtounicode-ntx.tex
+ tex/latex/pdfx/l8u-penc.def
+ tex/latex/pdfx/l8uarb-penc.def
+ tex/latex/pdfx/l8uarm-penc.def
+ tex/latex/pdfx/l8ucyr-penc.def
+ tex/latex/pdfx/l8udev-penc.def
+ tex/latex/pdfx/l8ugrk-penc.def
+ tex/latex/pdfx/l8uheb-penc.def
+ tex/latex/pdfx/l8ulat-penc.def
+ tex/latex/pdfx/l8umath-penc.def
+ tex/latex/pdfx/pdfa.xmp
+ tex/latex/pdfx/pdfe.xmp
+ tex/latex/pdfx/pdfvt.xmp
+ tex/latex/pdfx/pdfx.sty
+ tex/latex/pdfx/pdfx.xmp
+ tex/latex/pdfx/text89.def
+catalogue-ctan /macros/latex/contrib/pdfx
+catalogue-license lppl
+catalogue-topics pdf-feat
+catalogue-version 1.6.5f

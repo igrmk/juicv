@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+tlmgr --usermode --usertree="$(pwd)/vendor/texmf" "$@"
