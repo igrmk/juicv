@@ -24,12 +24,11 @@ commands=(
 )
 
 for cmd in "${commands[@]}"; do
-	read -r first_word _ <<< "$cmd"
-	log_normal "Running $first_word... "
+	log_normal "Running ${cmd%% *}..."
 	if eval "$cmd"; then
-		log_normal "OK\n"
+		log_normal " OK\n"
 	else
-		log_normal "FAILED\n"
+		log_normal " FAILED\n"
 	fi
 done
 
