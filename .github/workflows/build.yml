@@ -19,7 +19,7 @@ jobs:
       - name: Install TeX Live
         uses: teatimeguest/setup-texlive-action@v3
         with:
-          packages: xetex
+          packages: xetex metafont
 
       - name: Checkout repository
         uses: actions/checkout@v4
