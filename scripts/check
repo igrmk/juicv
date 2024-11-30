@@ -8,24 +8,29 @@ fi
 
 # shellcheck disable=SC2059
 log_normal() {
-	if [ $# -gt 0 ]; then
-		printf "$@" >&2
-	fi
-	printf "\n" >&2
+	printf "$@" >&2
 }
 
 pdf=$1
 
 mkdir -p logs
-log_normal "Running qpdf..."
-qpdf --check "$pdf" > logs/qpdf.log || log_normal FAILED
-log_normal "Running pdftk..."
-pdftk "$pdf" output /dev/null > logs/pdftk.log || log_normal FAILED
-log_normal "Running gs..."
-gs -o /dev/null -sDEVICE=pdfwrite "$pdf" > logs/gs.log || log_normal FAILED
-log_normal "Running verapdf..."
-verapdf --format json --success "$pdf" > logs/verapdf.log || log_normal FAILED
-log_normal "Running mutool..."
-mutool clean -gggg "$pdf" > logs/mutool.log || log_normal FAILED
+
+commands=(
+	"qpdf --check '$pdf' > logs/qpdf.log"
+	"pdftk '$pdf' output /dev/null > logs/pdftk.log"
+	"gs -o /dev/null -sDEVICE=pdfwrite '$pdf' > logs/gs.log"
+	"verapdf --format json --success '$pdf' > logs/verapdf.log"
+	"mutool clean -gggg '$pdf' > logs/mutool.log"
+)
+
+for cmd in "${commands[@]}"; do
+	read -r first_word _ <<< "$cmd"
+	log_normal "Running $first_word... "
+	if eval "$cmd"; then
+		log_normal "OK\n"
+	else
+		log_normal "FAILED\n"
+	fi
+done
 
 rm out.pdf
