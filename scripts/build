@@ -110,7 +110,7 @@ build_file() {
 	if [[ $verbose = true ]]; then
 		additional_options+=(-interaction=nonstopmode)
 	else
-		additional_options+=(-intercation=batchmode)
+		additional_options+=(-interaction=batchmode)
 	fi
 
 	export TEXINPUTS="./examples:./output:"
