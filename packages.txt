@@ -44,4 +44,4 @@ pdftexcmds
 stringenc
 uniquecounter
 zapfding
-cm
+amsfonts
