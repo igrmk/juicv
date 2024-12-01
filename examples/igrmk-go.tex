@@ -21,7 +21,7 @@
 \newcommand{\myemail}{\href{mailto:job@igr.mk}{job@igr.mk}}
 \IfFileExists{override.ignore.tex}{\input{override.ignore.tex}}{}
 
-\hypersetup{colorlinks, urlcolor=accentColor}
+\hypersetup{colorlinks, urlcolor=cvAccentColor}
 \columnratio{0.67}
 
 \setromanfont{Inter}[
@@ -134,7 +134,7 @@ Skilled Worker visa holder.
     \vspace{2pt}
     \centerline{%
         \footnotesize
-        \color{secondaryTextColor}
+        \color{cvSecondaryTextColor}
         --- 3 prior positions, primarily C++, omitted for brevity; details on request ---
     }%
 
@@ -157,7 +157,7 @@ Skilled Worker visa holder.
     }
 
 \cvRightSection{Skills}
-    \cvSkill{Go\hspace{5pt}\textcolor{secondaryTextColor}{(5 years)}}{5}
+    \cvSkill{Go\cvSkillExtras{5 years}}{5}
     \cvSkill{C\# / .NET}{5}
     \cvSkill{ASP.NET Core}{5}
     \cvSkill{Entity Framework Core}{5}
@@ -177,7 +177,7 @@ Skilled Worker visa holder.
 
     \vspace{6pt}
     {
-        \color{secondaryTextColor}
+        \color{cvSecondaryTextColor}
         \begin{cvTags}
             TDD &
             Reactive Extensions &

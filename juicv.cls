@@ -36,12 +36,12 @@
 \newlength{\smallToSmallSpacingAdjustment}
 \setlength{\smallToSmallSpacingAdjustment}{1.3pt}
 
-\definecolor{secondaryTextColor}{RGB}{115, 115, 115}
-\colorlet{secondaryTextColor}{secondaryTextColor}
-\definecolor{accentColor}{RGB}{40, 102, 225}
-\colorlet{accentColor}{accentColor}
-\definecolor{outlineColor}{RGB}{213, 213, 213}
-\colorlet{outlineColor}{outlineColor}
+\definecolor{cvSecondaryTextColor}{RGB}{115, 115, 115}
+\colorlet{cvSecondaryTextColor}{cvSecondaryTextColor}
+\definecolor{cvAccentColor}{RGB}{40, 102, 225}
+\colorlet{cvAccentColor}{cvAccentColor}
+\definecolor{cvDisabledColor}{RGB}{213, 213, 213}
+\colorlet{cvDisabledColor}{cvDisabledColor}
 \newcommand{\cvPersonIcon}{\raisebox{-0.1pt}{\includegraphics[height=7.5pt]{graphics/user-solid-compat.pdf}}}
 \newcommand{\cvExperienceIcon}{\raisebox{-0.5pt}{\includegraphics[height=7.5pt]{graphics/briefcase-solid-compat.pdf}}}
 \newcommand{\cvRatingMarker}{}
@@ -80,7 +80,7 @@
             {%
                 \large
                 \ifx\photo\empty
-                    \color{secondaryTextColor}
+                    \color{cvSecondaryTextColor}
                 \fi
                 \tagline
                 \par
@@ -144,7 +144,7 @@
         *{%
             \raggedright%
             \textbf{\title}%
-            \color{secondaryTextColor}
+            \color{cvSecondaryTextColor}
             \ifx\company\empty
                 \ifx\location\empty
                 \else
@@ -212,7 +212,7 @@
             \else
                 \\[\normalToNormalSpacingAdjustment]
             \fi
-            \color{secondaryTextColor}
+            \color{cvSecondaryTextColor}
             \ifx\company\empty
             \else
                 \company
@@ -273,13 +273,17 @@
     \foreach \x in {1,...,5}{%
         {%
             \ifnum \x > #2
-                \color{outlineColor!60}%
+                \color{cvDisabledColor!60}%
             \else
-                \color{accentColor}%
+                \color{cvAccentColor}%
             \fi
             \cvRatingMarker%
             \hspace{\cvMarkerSpacing}%
         }%
     }%
     \par%
+}
+
+\newcommand{\cvSkillExtras}[1]{%
+    \hspace{5pt}\textcolor{cvSecondaryTextColor}{(#1)}%
 }
