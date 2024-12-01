@@ -22,11 +22,11 @@ The following CV has been compiled from the [examples/igrmk-net.tex](examples/ig
 
 2. Clone the repo
 
-3. Rename both files for one of the examples to, say, `john.doe.tex` and `john.doe.xmpdata`.
+3. Rename one of the examples to, say, `john.doe.tex`.
    You might also want to remove the other files to avoid distractions
 
-4. Customize both files to match your experience.
-   Don’t forget to update the identifier in your `john.doe.xmpdata` file.
+4. Customize the file to match your experience.
+   Don’t forget to update the identifier.
 
 5. Run the following command to compile the CV:
 
