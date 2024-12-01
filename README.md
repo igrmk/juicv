@@ -153,3 +153,8 @@ The following example was compiled from the
    To address this, I vendored all the packages I could.
    However, some are OS- and architecture-specific,
    so they still need to be installed for the build process.
+
+7. I had to revert to Inter font version 3.19,
+   even though it is 3 years old and the current version is 4.1.
+   The issue with the newer version lies in character mapping:
+   when extracting text from a PDF, some characters are incorrectly mapped.

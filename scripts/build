@@ -19,7 +19,7 @@ log_underlined() {
 scopes=()
 prefix=""
 create_png=false
-verbose=false
+verbosity=0
 
 readarray -t available_docs < <(find examples -type f -name "igrmk-*.tex")
 
@@ -43,7 +43,7 @@ usage() {
 	log_normal "               Default: all"
 	log_normal "  -p PREFIX    Add a prefix to the output file names"
 	log_normal "  -c           Create PNGs in the build output"
-	log_normal "  -v           Be verbose"
+	log_normal "  -v, -vv      Be verbose or extremely verbose"
 }
 
 while getopts "hs:p:cv" opt; do
@@ -58,7 +58,9 @@ while getopts "hs:p:cv" opt; do
 			create_png=true
 			;;
 		v)
-			verbose=true
+			echo 1
+			((verbosity++)) || true
+			echo 2
 			;;
 		?)
 			usage
@@ -106,11 +108,17 @@ done
 
 build_file() {
 	log_underlined "PROCESSING '$1'"
-	additional_options=()
-	if [[ $verbose = true ]]; then
-		additional_options+=(-interaction=nonstopmode)
+	xelatex_extra_options=()
+	xdvipdfmx_extra_options=()
+
+	if [[ $verbosity -gt 0 ]]; then
+		xelatex_extra_options+=(-interaction=nonstopmode)
 	else
-		additional_options+=(-interaction=batchmode)
+		xelatex_extra_options+=(-interaction=batchmode)
+	fi
+
+	if [[ $verbosity -gt 1 ]]; then
+		xdvipdfmx_extra_options+=(-vv)
 	fi
 
 	export TEXINPUTS="./examples:./output:"
@@ -118,7 +126,11 @@ build_file() {
 	export max_print_line=200
 
 	for i in {1..2}; do
-		xelatex "${additional_options[@]}" -shell-escape -output-driver="xdvipdfmx -z 0" -output-directory=output "examples/$1.tex"
+		xelatex "${xelatex_extra_options[@]}" \
+			-shell-escape \
+			-output-driver="xdvipdfmx -z 0 ${xdvipdfmx_extra_options[*]}" \
+			-output-directory=output \
+			"examples/$1.tex"
 	done
 
 	output_name="$1"
