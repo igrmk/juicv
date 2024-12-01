@@ -21,6 +21,7 @@ commands=(
 	"gs -o /dev/null -sDEVICE=pdfwrite '$pdf' > logs/gs.log"
 	"verapdf --format json --success '$pdf' > logs/verapdf.log"
 	"mutool clean -gggg '$pdf' > logs/mutool.log"
+	"pdfimages -list '$pdf' 2> logs/pdfimages.log > /dev/null && [[ ! -s logs/pdfimages.log ]]"
 )
 
 for cmd in "${commands[@]}"; do
