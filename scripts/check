@@ -25,7 +25,7 @@ commands=(
 )
 
 for cmd in "${commands[@]}"; do
-	log_normal "Running ${cmd%% *}..."
+	log_normal "Running %-12s" "${cmd%% *}..."
 	if eval "$cmd"; then
 		log_normal " OK\n"
 	else
