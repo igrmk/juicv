@@ -158,3 +158,4 @@ The following example was compiled from the
    even though it is 3 years old and the current version is 4.1.
    The issue with the newer version lies in character mapping:
    when extracting text from a PDF, some characters are incorrectly mapped.
+   See the [issue](https://github.com/rsms/inter/issues/774) for details.
