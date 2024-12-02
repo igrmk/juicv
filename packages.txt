@@ -16,7 +16,6 @@ hyperref
 colorprofiles
 pdfescape
 etoolbox
-fontspec
 environ
 trimspaces
 enumitem
@@ -26,12 +25,9 @@ graphics-def
 hycolor
 kvoptions
 kvsetkeys
-l3packages
 refcount
 rerunfilecheck
 url
-l3backend
-l3kernel
 intcalc
 bitset
 bigintcalc

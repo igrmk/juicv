@@ -144,6 +144,7 @@ build_file() {
 		mv "output/$1.pdf" "output/$output_name.pdf"
 	fi
 
+	log_normal "CLEANING..."
 	rm -f output/*.aux output/*.out output/*.log output/*.xmpi output/*.xmpdata
 
 	log_normal "DONE"
