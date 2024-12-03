@@ -149,7 +149,8 @@ So, never use Tectonic for your CV.
 
 ### Keywords Issues
 
-PDF metadata is stored in two different places within PDF files. And I have no idea why.
+PDF metadata is stored in two different places within PDF files:
+in XMP packet and in /Info dictionary.
 
 I’ve never been able to specify `\Keywords` in a way that prevents
 `verapdf` from complaining about a mismatch between the two copies of this metadata.
