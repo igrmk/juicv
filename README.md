@@ -150,7 +150,9 @@ So, never use Tectonic for your CV.
 ### Keywords Issues
 
 PDF metadata is stored in two different places within PDF files:
-in XMP packet and in /Info dictionary.
+
+* in XMP packet: `mutool show output/igrmk-go.pdf Root/Metadata`
+* and in `/Info` dictionary: `mutool show output/igrmk-go.pdf Info`
 
 I’ve never been able to specify `\Keywords` in a way that prevents
 `verapdf` from complaining about a mismatch between the two copies of this metadata.
