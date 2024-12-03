@@ -13,15 +13,16 @@ log_normal() {
 
 pdf=$1
 
-mkdir -p logs
+logs=logs.git.ignore
+mkdir -p "$logs"
 
 commands=(
-	"qpdf --check '$pdf' > logs/qpdf.log"
-	"pdftk '$pdf' output /dev/null > logs/pdftk.log"
-	"gs -o /dev/null -sDEVICE=pdfwrite '$pdf' > logs/gs.log"
-	"verapdf --format json --success '$pdf' > logs/verapdf.log"
-	"mutool clean -gggg '$pdf' > logs/mutool.log"
-	"pdfimages -list '$pdf' 2> logs/pdfimages.log > /dev/null && [[ ! -s logs/pdfimages.log ]]"
+	"qpdf --check '$pdf' > '$logs/qpdf.log'"
+	"pdftk '$pdf' output /dev/null > '$logs/pdftk.log'"
+	"gs -o /dev/null -sDEVICE=pdfwrite '$pdf' > '$logs/gs.log'"
+	"verapdf --format json --success '$pdf' > '$logs/verapdf.log'"
+	"mutool clean -gggg '$pdf' > '$logs/mutool.log'"
+	"pdfimages -list '$pdf' 2> '$logs/pdfimages.log' > /dev/null && [[ ! -s '$logs/pdfimages.log' ]]"
 	"! pdftotext '$pdf' - | ggrep -qP '[^\x00-\x7F–—’•]'"
 )
 
