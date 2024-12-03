@@ -17,21 +17,21 @@ The following CV has been compiled from the [examples/igrmk-net.tex](examples/ig
 1. Install your favourite TeX distribution, for example, on macOS using Homebrew:
 
    ~~~bash
-   brew install basictex
+   brew install texlive
    ~~~
 
-2. Clone the repo
+2. To use the Inter font as shown in my examples, copy the `fonts` directory as well.
+   Note that currently only a specific version of the Inter font works properly due to
+   [this issue](https://github.com/rsms/inter/issues/774).
 
-3. Rename one of the examples to, say, `john.doe.tex`.
-   You might also want to remove the other files to avoid distractions
+3. Copy one of the examples to, say, `john.doe.tex`.
 
-4. Customize the file to match your experience.
-   Don’t forget to update the identifier.
+4. Customize the file to match your experience. Don’t forget to update the identifier.
 
-5. Run the following command to compile the CV:
+5. Run the following command TWICE in a row to compile the CV:
 
    ~~~bash
-   ./scripts/build -s john.doe
+   xelatex -shell-escape -output-driver="xdvipdfmx -z 0" john.doe.tex
    ~~~
 
 ## Test Your CV
@@ -148,11 +148,12 @@ The following example was compiled from the
    while `\Subject` is written to `dc:description`.
    What the fuck?! Or could it just be a documentation bug?
 
-6. There isn’t a proper package manager for LaTeX
+6. There isn't a proper package manager for LaTeX
    that can reliably reproduce the build environment.
-   To address this, I vendored all the packages I could.
-   However, some are OS- and architecture-specific,
-   so they still need to be installed for the build process.
+   Vendoring doesn't fully solve the problem either,
+   as some packages are OS- and architecture-specific.
+   These still need to be installed during the build process.
+   The final decision was simply not to care much about it.
 
 7. I had to revert to Inter font version 3.19,
    even though it is 3 years old and the current version is 4.1.
