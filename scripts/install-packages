@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-set -euo pipefail
-
-if [[ ! -d "vendor" ]]; then
-	mkdir -p ./vendor/texmf
-	./scripts/tlmgr init-usertree
-fi
-# shellcheck disable=SC2046
-./scripts/tlmgr install $(< packages.txt)

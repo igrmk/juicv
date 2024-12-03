@@ -1,3 +1,5 @@
+\let\pdfcreationdate=\creationdate%
+
 \begin{filecontents}[force]{\jobname.xmpdata}
     \Author{Igor Mikushkin}
     \Publisher{Igor Mikushkin}
@@ -34,7 +36,7 @@
 
 \begin{document}
 \begin{paracol}{2}
-\cvHeader
+\cvHeader%
     {Igor Mikushkin}
     {}
     {Lead Software Engineer, Software Architect, CTO}
@@ -109,8 +111,8 @@ Best regards,\\
 Igor Mikushkin
 
 \newpage
-\switchcolumn
-\raggedright
+\switchcolumn%
+\raggedright%
 \setlength{\parskip}{0em}
 
 \cvRightSection{To}
@@ -120,7 +122,7 @@ Igor Mikushkin
     Igor Mikushkin\\
     London, United Kingdom, SE8\\
     \myphone\\
-    \myemail
+    \myemail%
 
     \vspace{6pt}
     {

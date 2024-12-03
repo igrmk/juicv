@@ -1,3 +1,6 @@
+fontspec
+xetex
+metafont
 pdfx
 tcolorbox
 tikzfill

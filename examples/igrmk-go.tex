@@ -1,3 +1,5 @@
+\let\pdfcreationdate=\creationdate%
+
 \begin{filecontents}[force]{\jobname.xmpdata}
     \Author{Igor Mikushkin}
     \Publisher{Igor Mikushkin}
@@ -35,7 +37,7 @@
 
 \begin{document}
 \begin{paracol}{2}
-\cvHeader
+\cvHeader%
     {Igor Mikushkin}
     {avatar}
     {Lead Software Engineer, Software Architect, CTO}
@@ -46,7 +48,7 @@ An engineer at heart, eager learner, and supporting tools advocate.
 Skilled Worker visa holder.
 
 \cvLeftSection{\cvExperienceIcon}{Experience}
-    \cvLeftEvent
+    \cvLeftEvent%
         {Chief Technology Officer}
         {Start From Today Ltd}
         {2021 -- present}
@@ -66,7 +68,7 @@ Skilled Worker visa holder.
             \item Administered GCP (60 microservices, 250 containers, 99.98\% uptime)
         \end{itemize}
 
-    \cvLeftEvent
+    \cvLeftEvent%
         {Software Engineer}
         {Igor Mikushkin SP}
         {2017 -- 2021}
@@ -84,7 +86,7 @@ Skilled Worker visa holder.
             \item Built a personal cryptocurrency algotrading system in Go
         \end{itemize}
 
-    \cvLeftEvent
+    \cvLeftEvent%
         {Software Engineer}
         {SalonUtlimate Inc.}
         {2016 -- 2017}
@@ -98,7 +100,7 @@ Skilled Worker visa holder.
                   including SportClips (2K branches), leading to a decade-long partnership
         \end{itemize}
 
-    \cvLeftEvent
+    \cvLeftEvent%
         {Lead Software Engineer}
         {Mercury Development Russia Inc.}
         {2012 -- 2016}
@@ -109,7 +111,7 @@ Skilled Worker visa holder.
             \item Led social features in a UWP C\# app for a fitness tracker (500K+ MAU)
         \end{itemize}
 
-    \cvLeftEvent
+    \cvLeftEvent%
         {Lead Software Engineer}
         {Elvees NeoTek CJSC.}
         {2012 -- 2012}
@@ -121,7 +123,7 @@ Skilled Worker visa holder.
                   in a computer vision-powered surveillance system
         \end{itemize}
 
-    \cvLeftEvent
+    \cvLeftEvent%
         {Software Engineer}
         {CQG Inc.}
         {2008 -- 2012}
@@ -141,13 +143,13 @@ Skilled Worker visa holder.
     }%
 
 \newpage
-\switchcolumn
-\raggedright
+\switchcolumn%
+\raggedright%
 
 \cvRightSection{Contacts}
     London, United Kingdom, SE8\\
     \myphone\\
-    \myemail
+    \myemail%
 
     \vspace{6pt}
     {
@@ -198,7 +200,7 @@ Skilled Worker visa holder.
             Symfony &
             NGINX &
             jq &
-            \LaTeX &
+            \LaTeX{} &
             Jira &
             Notion &
             GraphQL &
@@ -208,7 +210,7 @@ Skilled Worker visa holder.
     }
 
 \cvRightSection{Education}
-    \cvRightEventNoBody
+    \cvRightEventNoBody%
         {M.S. in Computer Science}
         {Nayanova University}
         {1999 -- 2005}
@@ -216,7 +218,7 @@ Skilled Worker visa holder.
         {}
 
 \cvRightSection{Certifications}
-    \cvRightEventNoBody
+    \cvRightEventNoBody%
         {10+ courses on Machine Learning, Google Cloud Platform, Serverless Apps, Kubernetes, and more}
         {Coursera}
         {2016 -- present}

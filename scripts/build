@@ -122,7 +122,6 @@ build_file() {
 	fi
 
 	export TEXINPUTS="./examples:./output:"
-	export TEXMFHOME=./vendor/texmf
 	export max_print_line=200
 
 	for i in {1..2}; do
