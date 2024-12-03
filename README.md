@@ -170,8 +170,16 @@ There isn't a proper package manager for LaTeX
 that can reliably reproduce the build environment.
 Vendoring doesn't fully solve the problem either,
 as some packages are OS- and architecture-specific.
-These still need to be installed during the build process.
-The final decision was simply not to care much about it.
+These still need to be installed during the build process,
+and they often end up out of sync with vendored ones
+when using different distributions.
+
+While this can be addressed
+by carefully choosing
+which packages to vendor and which to install from the distribution,
+the fragility of this solution doesn't inspire confidence.
+The final decision was simply not to care much about it
+and to install everything from the distribution.
 
 ### Inter Font Issues
 
