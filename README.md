@@ -164,7 +164,7 @@ metadata specified by the `\Keywords` attribute is written to the `dc:subject` k
 while `\Subject` is written to `dc:description`.
 What the fuck?! Or could it just be a documentation bug?
 
-### Reproducibility
+### Reproducibility Issues
 
 There isn't a proper package manager for LaTeX
 that can reliably reproduce the build environment.
