@@ -19,6 +19,7 @@ log_underlined() {
 scopes=()
 prefix=""
 create_png=false
+run_open=false
 verbosity=0
 
 readarray -t available_docs < <(find examples -type f -name "igrmk-*.tex")
@@ -34,7 +35,7 @@ comma_separated_available_scopes=$(printf ", %s" "${available_scopes[@]}")
 comma_separated_available_scopes=${comma_separated_available_scopes:2}
 
 usage() {
-	log_normal "Usage: $0 [-h] [-s SCOPE] [-p PREFIX] [-c] [-v]"
+	log_normal "Usage: $0 [-h] [-s SCOPE] [-p PREFIX] [-c] [-v] [-o]"
 	log_normal
 	log_normal "Options:"
 	log_normal "  -h           Display this help message and exit"
@@ -43,10 +44,11 @@ usage() {
 	log_normal "               Default: all"
 	log_normal "  -p PREFIX    Add a prefix to the output file names"
 	log_normal "  -c           Create PNGs in the build output"
+	log_normal "  -o           Open using 'open' command"
 	log_normal "  -v, -vv      Be verbose or extremely verbose"
 }
 
-while getopts "hs:p:cv" opt; do
+while getopts "hs:p:cov" opt; do
 	case "$opt" in
 		s)
 			scopes+=("$OPTARG")
@@ -56,6 +58,9 @@ while getopts "hs:p:cv" opt; do
 			;;
 		c)
 			create_png=true
+			;;
+		o)
+			run_open=true
 			;;
 		v)
 			echo 1
@@ -154,6 +159,10 @@ build_file() {
 		pdftoppm -singlefile -png -r 300 "output/$output_name.pdf" "output/$output_name"
 		log_normal "DONE"
 		log_normal
+	fi
+
+	if [[ $run_open = true ]]; then
+		open "output/$output_name.pdf"
 	fi
 }
 
